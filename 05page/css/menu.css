@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+/*header*/
+#header{height: 155px;background: #0d72a6;background-image: url(../images/04비행기.jpg);background-repeat: no-repeat;
+background-position:200px 5px}
+#header .main_header{width: 980px;height:90px;margin:0 auto;padding-bottom: 25px;position: relative;}
+#header .main_header>a{float: left;padding-top: 20px;}}
+#header .main_header>div.wrap{position: relative;}
+#header .main_header>div.wrap .searchInp{width: 300px;height: 40px;
+	border: 1px solid #000;border-radius:20px;text-indent:80px}
+#header .main_header>div.wrap .searchBtn{width: 20px;height: 20px;background-image: url(../images/search.jpg);
+	text-indent:-9999px;border:0 none;position: absolute;right: 120px;top: 10px;}
+#header .main_header>div.wrap .searchTitle{display: block;width: 60px;height: 20px;background-image: url(images/searchtext.jpg);
+	position: absolute;top: 9px;left: 12px;font-weight: bold;}
+#header .main_header>div.wrap{position: absolute;width: 400px;height: 50px;left: 50%;top: 50%;
+	transform:translate(-50%,-50%);}
+
+#header .main_header>.sns{float: right;padding-top: 25px;}
+#header .main_header>div.sns>ul>li{float:left;margin-right: 5px;color:#fff;}
+#header .main_header>div.sns>ul>li>h2>strong{font-size:1.0em;}
+
+
+#header .gnbWrap{background: #e0e0e0;}
+#header .gnbWrap .main_menu{width: 980px;height: 60px;margin:0 auto;}
+#header .main_menu>ul{position: relative;}
+#header .main_menu>ul>li{width: 160px;float: left;line-height: 60px;border-right: 1px solid #cfcfcf;text-align: center;
+font-weight: bold;transition:0.3s}
+
+#header .main_menu>ul>li:first-child{border-left: 1px solid #cfcfcf;}
+#header .main_menu>ul>a{display: block;text-align: center;}
+#header .main_menu>ul>li:nth-child(4) .new{width: 33px;height: 27px;background:orange;}
+#header .main_menu>ul>li:hover{background: #b9b9b9;}
+#header .gnbWrap .main_menu:hover div.menubar{display: block;}
+
+#header .menubar{width: 100%;height: 33px;display:none;
+	background:rgba(0,0,0,0.7);position: absolute;left: 0;margin-top: 5px;z-index:1}
+#header .main_menu>ul>li>ul.smenu{display:none;position: absolute;left:-80px;width: 120%;z-index:2}
+#header .main_menu>ul>li:nth-child(5) ul.smenu{left: -130px;}
+#header .main_menu>ul>li>ul.smenu>li{float: left;font-size:0.8em;}
+#header .main_menu>ul>li>ul.smenu li a{display: block;color:#fff;line-height: 25px;width:80px;text-align: center;margin-top: 6px;}
+#header .gnbWrap .main_menu>ul>li:hover .smenu{display: block;}

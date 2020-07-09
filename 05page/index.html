@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>Travel Main</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script>
+		$(document).ready(function(){
+			var mySlider = $(".slider").bxSlider({
+				pager:false,controls:false
+			});
+			var mySlider1 = $(".slider1").bxSlider({
+				pager:false,controls:false
+			});
+			$(".nextBtn").click(function(){
+				mySlider.goToNextSlide();
+			});
+			$(".prevBtn").click(function(){
+				mySlider.goToPrevSlide();
+			});
+			$(".nextBtn1").click(function(){
+				mySlider1.goToNextSlide();
+			});
+			$(".prevBtn1").click(function(){
+				mySlider1.goToPrevSlide();
+			});
+		});
+	</script>
+</head>
+<body>
+<!-- header -->
+<header id="header">
+	<div class="main_header clearfix">
+		<a href="./index.html"><img src="images/logo.png" alt="" class="logo"></a>
+		<div class="wrap">
+	     <form action="#" method="get">
+		 	<label for="searchTxt" class="searchTitle">SEARCH</label>
+		 	<input type="text" id="searchTxt" name="search" placeholder="검색어를 입력하세요." class="searchInp">
+		 	<button type="submit" class="searchBtn">search</button>
+		 </form>
+		</div>
+		<div class="sns clearfix">
+			<ul class="clearfix">
+				<li><h2><strong>+82</strong> 02 12345678</h2></li>
+				<li><a href="#"><img src="images/facebook.png" alt=""></a></li>
+				<li><a href="#"><img src="images/twitter.png" alt=""></a></li>
+				<li><a href="#"><img src="images/blog.png" alt=""></a></li>
+				<li><a href="#"><img src="images/in.png" alt=""></a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="gnbWrap">
+		<nav class="main_menu">
+			<ul class="clearfix">
+				<li><a href="#">여행도시</a>
+					<ul class="smenu clearfix">
+						<li><a href="#">menu</a></li>
+						<li><a href="#">menu</a></li>
+						<li><a href="#">menu</a></li>
+						<li><a href="#">menu</a></li>
+					</ul>
+				</li>
+				<li><a href="#">호텔예약</a>
+					<ul class="smenu clearfix" style="padding-left:163.3px">
+						<li><a href="#">menu</a></li>
+						<li><a href="#">menu</a></li>
+						<li><a href="#">menu</a></li>
+						<li><a href="#">menu</a></li>
+					</ul>
+				</li>
+				<li><a href="#">렌트카</a>
+					<ul class="smenu clearfix" style="padding-left:326.6px">
+						<li><a href="#">menu</a></li>
+						<li><a href="#">menu</a></li>
+						<li><a href="#">menu</a></li>
+						<li><a href="#">menu</a></li>
+					</ul></li>
+				<li class="clearfix">
+					<a href="#">여행TIP</a>
+					<a href="#" class="new">N</a>
+					<ul class="smenu clearfix"  style="padding-left:489.9px">
+						<li><a href="#">menu</a></li>
+						<li><a href="#">menu</a></li>
+						<li><a href="#">menu</a></li>
+						<li><a href="#">menu</a></li>
+					</ul>
+				</li>
+				<li><a href="./company.html">회사소개</a>
+					<ul class="smenu clearfix"  style="padding-left:653.2px">
+						<li><a href="#">회사소개</a></li>
+						<li><a href="#">사업영역</a></li>
+						<li><a href="#">조직도</a></li>
+						<li><a href="#">채용정보</a></li>
+						<li><a href="#">오시는길</a></li>
+					</ul></li>
+				<li><a href="#">커뮤니티</a>
+					<ul class="smenu clearfix"  style="padding-left:816.5px">
+						<li><a href="#">menu</a></li>
+						<li><a href="#">menu</a></li>
+						<li><a href="#">menu</a></li>
+						<li><a href="#">menu</a></li>
+					</ul></li>
+			</ul>
+			<div class="menubar"></div>
+		</nav>
+	</div>
+</header>
+<!-- body -->
+<div class="contents">
+	<img src="images/content2.png" alt="" class="img01">
+	<img src="images/reallyAir1.png" alt="" class="img00">
+	<img src="images/reallyAir2.png" alt="" class="img02">
+	<img src="images/content6.png" alt="" class="img03">
+	<div class="container">
+		<img src="images/02풍선.png" alt="" class="pong01">
+		<div class="conWrap clearfix">
+			<div class="conOne clearfix">
+				<div class="reserved">
+					<aside id="main_aside">
+						<input type="radio" name="tab" id="Plane" class="inp" checked="checked">
+						<input type="radio" name="tab" id="Hotel" class="inp">
+						<input type="radio" name="tab" id="Car" class="inp" >
+						<input type="radio" name="tab" id="Area" class="inp">
+						<div class="buttons clearfix">
+							<label for="Plane" class="clearfix">
+								<img src="images/Airplane.png" alt="" class="on"><img src="images/AirplaneG.png" alt="" class="off">
+							공항예약</label>
+							<label for="Hotel"><img src="images/check.png" alt="" class="on"><img src="images/checkG.png" alt="" class="off">호텔예약</label>
+							<label for="Car"><img src="images/car.png" alt="" class="on"><img src="images/carG.png" alt="" class="off">렌트카</label>
+							<label for="Area"><img src="images/bag.png" alt="" class="on"><img src="images/bagG.png" alt="" class="off">휴양지</label>
+						</div>
+					</aside>
+					<form action="#" method="get" class="formlayer">
+						<fieldset>
+							<legend>여행일정</legend>
+							<ul>
+								<li>
+									<label for="golo">가고 싶은 나라를 선택하세요.</label>
+									<select name="nara" id="golo">
+										<option value="">선택하세요.</option>
+										<option value="미국">미국</option>
+										<option value="일본">일본</option>
+										<option value="중국">중국</option>
+									</select>
+								</li>
+								<li class="clearfix">
+									<div class="left">
+										<label for="sdate">출발일</label>
+										<input type="date" id="sdate">
+									</div>
+									<div class="right">
+										<label for="edate">도착일</label>
+										<input type="date" id="edate">
+									</div>
+								</li>
+								<li class="clearfix">
+									<div class="left">
+										<label for="cgrade">좌석등급</label>
+										<select name="cgrade" id="cgrade">
+											<option value="비지니스">비지니스</option>
+											<option value="이코노미">이코노미</option>
+										</select>
+									</div>
+									<div class="right num clearfix">
+										<label for="num">성인</label>
+										<label for="num">아이</label>
+										<input type="number" id="num">
+										<input type="number" id="num">
+									</div>
+								</li>
+							</ul>
+						</fieldset>
+						<button type="submit" class="tBtn">검색하기</button>
+					</form>
+				</div>
+				<div class="France">
+					<ul>
+						<li><img src="images/03여행01.jpg" alt=""></li>
+					</ul>
+					<div class="box clearfix">
+						<li>프랑스</li>
+						<li><a href="#">1,900,000원~ <img src="images/point.png" alt=""></a></li>
+					</div>
+				</div>
+				<div class="jp">
+					<ul>
+						<li><img src="images/03여행02.jpg" alt=""></li>
+					</ul>
+					<div class="box clearfix">
+						<li>일본</li>
+						<li><a href="#">890,000원~ <img src="images/point.png" alt=""></a></li>
+					</div>
+				</div>
+			</div>
+<!-- CONTWO -->
+			<div class="conTwo">
+				<section>
+					<h2>TRAVEL GO</h2>
+					<div class="line"></div>
+					<p>지금, 여행을 떠나고 싶다면?<br>시네마틱과 여행을 떠나자!</p>
+				</section>
+			</div>
+		</div>
+<!-- conThree -->
+		<div class="conThree clearfix">
+			<div class="HOTEL">
+				<ul class="slider">
+					<li><img src="images/03여행03.jpg" alt="" class="bg01">
+						<div class="box1 clearfix"><a href="#">HILLTON HOTEL (PARIS)</a><br>
+							<img src="images/STARY.png" alt="">
+							<img src="images/STARY.png" alt="">
+							<img src="images/STARY.png" alt="">
+							<img src="images/STARW.png" alt="">
+							<img src="images/STARW.png" alt="">
+						</div>
+					</li>
+					<li><img src="images/03여행03.jpg" alt="" class="bg01">
+						<div class="box1 clearfix"><a href="#">HILLTON HOTEL (PARIS)</a><br>
+							<img src="images/STARY.png" alt="">
+							<img src="images/STARY.png" alt="">
+							<img src="images/STARY.png" alt="">
+							<img src="images/STARW.png" alt="">
+							<img src="images/STARW.png" alt="">
+						</div>
+					</li>
+				</ul>
+					<div class="nextBtn">
+						<img src="images/next.png" alt="next">
+					</div>
+					<div class="prevBtn">
+						<img src="images/prev.png" alt="prev">
+					</div>
+			</div>
+			<div class="PALACE">
+				<ul class="slider1">
+					<li><img src="images/03여행04.jpg" alt="" class="bg02">
+						<div class="box2 clearfix"><a href="#">관광명소 (디즈니랜드)</a><br>
+							<img src="images/STARY.png" alt="">
+							<img src="images/STARY.png" alt="">
+							<img src="images/STARY.png" alt="">
+							<img src="images/STARW.png" alt="">
+							<img src="images/STARW.png" alt="">
+						</div>
+					</li>
+					<li><img src="images/03여행04.jpg" alt="" class="bg02">
+						<div class="box2 clearfix"><a href="#">관광명소 (디즈니랜드)</a><br>
+							<img src="images/STARY.png" alt="">
+							<img src="images/STARY.png" alt="">
+							<img src="images/STARY.png" alt="">
+							<img src="images/STARW.png" alt="">
+							<img src="images/STARW.png" alt="">
+						</div>
+					</li>
+				</ul>
+					<div class="nextBtn1">
+						<img src="images/next.png" alt="next">
+					</div>
+					<div class="prevBtn1">
+						<img src="images/prev.png" alt="prev">
+					</div>
+			</div>
+			<div class="weather">
+				<img src="images/03여행005.jpg" alt="">
+				<div class="box clearfix">
+						<li><h3>20℃구름조금</h3>
+							<p>습도 60% 바람 남남동 2m/s</p>
+						</li>
+				</div>
+			</div>
+			<div class="facebook">
+				<img src="images/03여행06.jpg" alt="">
+				<div class="txt clearfix">
+					<p>"해외여행은 처음이었는데,<br>시네마틱여행 덕분에 무사히<br>다녀올 수 있었어요."</p>
+					<span>프랑스 파리 자유여행</span><br>
+					<img src="images/STARY.png" alt="">
+					<img src="images/STARY.png" alt="">
+					<img src="images/STARY.png" alt="">
+					<img src="images/STARG.png" alt="">
+					<img src="images/STARG.png" alt="">
+				</div>				
+				<div class="box clearfix">
+						<li><h3>facebook 여행후기</h3>
+						(임정희님)</li>
+				</div>
+			</div>
+			<div class="infoI">
+				<img src="images/03여행07.jpg" alt="">
+						<li class="down"><img src="" alt=""><h3>여행정보</h3>
+							<p>다양한 나라의 명서와 맛집 등<br>상세한 정보를 볼 수 있습니다.</p></li>
+						<div class="wrap">
+							<div class="bar1"></div>
+							<div class="bar2"></div>
+						</div>	
+				<div class="full clearfix"></div>
+			</div>
+			<div class="infoI">
+				<img src="images/03여행08.jpg" alt="">
+				<li class="up"><img src="" alt=""><h3>맛집정보</h3>
+						<p>다양한 나라의 명서와 맛집 등<br>상세한 정보를 볼 수 있습니다.</p></li>
+					<div class="wrap">
+						<div class="bar1"></div>
+						<div class="bar2"></div>
+					</div>	
+				<div class="full clearfix"></div>
+			</div>
+			<div class="infoI">
+				<img src="images/03여행09.jpg" alt="">
+				<li class="up"><img src="" alt=""><h3>숙박정보</h3>
+							<p>다양한 나라의 명서와 맛집 등<br>상세한 정보를 볼 수 있습니다.</p></li>
+				<div class="wrap">
+					<div class="bar1"></div>
+					<div class="bar2"></div>
+				</div>	
+				<div class="full clearfix"></div>
+			</div>
+			<div class="infoI">
+				<img src="images/03여행10.jpg" alt="">
+				<li class="down"><img src="" alt=""><h3>여행자후기</h3>
+							<p>다양한 나라의 명서와 맛집 등<br>상세한 정보를 볼 수 있습니다.</p></li>
+						<div class="wrap">
+							<div class="bar1"></div>
+							<div class="bar2"></div>
+						</div>	
+				<div class="full clearfix"></div>
+			</div>
+		</div>
+		
+<!-- footer -->
+
+	<footer>
+		<div class="footer">
+			<ul class="clearfix">
+				<li><a href="#">이용약관</a></li>
+				<li><a href="#">개인정보취급방침</a></li>
+				<li><a href="#">사이트맵</a></li>
+				<li><a href="#">고객센터</a></li>
+				<li><a href="#">공고 및 제휴문의</a></li>
+			</ul>
+			<p>123-456 서울특별시 구로구 구로동 (주)시네마틱 사업자 등록번호:123-45-6778910 대표이사 : 홍길동 대표번호 : 02 - 1234 - 5678<br>COPYRIGHTⓒ2020 CINEMATIC TOUR. ALL RIGHTS RESERVED.</p>
+		</div>
+	</footer>
+</div>
+
+</body>
+</html>

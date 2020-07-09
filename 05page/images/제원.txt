@@ -1,0 +1,5 @@
+header 90
+mainhea 60
+width 980
+w230 margin 20
+h240 
