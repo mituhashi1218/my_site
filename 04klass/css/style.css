@@ -15,12 +15,10 @@ body{font-family: 'Open Sans', sans-serif;}
 .conOne .conWrap ul li .txt h2{font-size:3em;text-align:left;margin-bottom: 80px;font-weight:bold;}
 .conOne .conWrap ul li .txt a{width: 300px;height: 60px;display: block;background: #444daa;
 color:#fff;text-align: center;line-height: 60px;font-weight: bold;}
-		.bx-wrapper {
-		    -moz-box-shadow: none;
-		    -webkit-box-shadow: none;
-		    box-shadow: none;
-		    border: 0 none;
-		}
+.conOne .bx-wrapper {box-shadow:none;
+    border: 5px solid #fff;
+    background: #fff;
+}
 
 
 .conTwo{width: 1200px;height: 1000px;margin:0 auto;padding-top: 50px;}
