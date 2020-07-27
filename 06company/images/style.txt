@@ -1,0 +1,113 @@
+ch 4-2 
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/all.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script>
+		$(document).ready(function(){
+			var mySlider = $(".slider").bxSlider({
+				controls:false,auto:true
+			});
+			$(".nextBtn").click(function(){
+				mySlider.goToNextSlide();
+			});
+			$(".prevBtn").click(function(){
+				mySlider.goToPrevSlide();
+			});
+		});
+	</script>
+</head>
+<body>
+<!-- header -->
+<header class="header">
+	<ul class="slider">
+		<li>
+			<img src="images/mega11.jpg" alt="">
+			<div class="full"></div>
+		</li>
+		<li>
+			<img src="images/mega22.jpg" alt="">
+			<div class="full"></div>
+		</li>
+		<li>
+			<img src="images/mega33.jpg" alt="">
+			<div class="full"></div>
+		</li>
+	</ul>
+	<div class="nextBtn">
+			<img src="images/next.png" alt="next">
+	</div>
+	<div class="prevBtn">
+			<img src="images/prev.png" alt="prev">
+	</div>
+	<div class="headerWrap clearfix">
+		<nav class="topMenu">
+			<h1 class="logo"><a href="#">LOGO</a></h1>
+			<ul class="clearfix">
+				<li><a href="#">상영작</a>
+					<ul class="smenu clearfix">
+						<li><a href="">영화목록</a></li>
+					</ul>
+				</li>
+				<li><a href="#">예매</a>
+					<ul class="smenu clearfix" style="padding-left:160px;">
+						<li><a href="">영화목록</a></li>
+					</ul>
+				</li>
+				<li><a href="#">이벤트</a>
+					<ul class="smenu clearfix" style="padding-left:300px;">
+						<li><a href="">진행중인 이벤트</a></li><br>
+						<li><a href="">지난 이벤트</a></li>
+					</ul>
+				</li>
+				<li><a href="#">혜택</a>
+					<ul class="smenu clearfix" style="padding-left:490px;">
+						<li><a href="">멤버십</a></li><br>
+						<li><a href="">제휴</a></li>
+					</ul>
+				</li>
+				<li><a href="#">스토어</a>
+					<ul class="smenu clearfix" style="padding-left:650px;">
+						<li><a href="">음식</a></li><br>
+						<li><a href="">굿즈</a></li>
+					</ul>
+				</li>
+				<li class="language"><a href="#">KOR</a></li>
+				<li class="language"><a href="#">ENG</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+<!-- content -->
+<div class="contents">
+	<div class="bg"></div>
+	<div class="container clearfix">
+		<div><a href="#" class="line1"><img src="images/calender.png" alt=""><p>상영시간표</p></a></div>
+		<div><a href="#" class="line1"><img src="images/slate.png" alt=""><p>영화목록</p></a></div>
+		<div><a href="#" class="line1"><img src="images/ticket.png" alt=""><p>빠른예매</p></a></div>
+		<div><a href="#" class="line1"><img src="images/theater.png" alt=""><p>영화관</p></a></div>
+		<div class="gap"><p>박스오피스</p></div>
+		<div class="movie"><img src="images/ban.jpg" alt="">반도<br>예매율48.7%<br>2020.07.15 개봉<div><i class="fas fa-vote-yea" style="font-size:2x;"></i>예매</div></div>
+		<div class="movie"><img src="images/alive.jpg" alt=""></div>
+		<div class="movie"><img src="images/steel.jpg" alt=""></div>
+		<div class="movie"><img src="images/bombshell.jpg" alt=""></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+</div>
+</body>
+</html>
