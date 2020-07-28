@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>theater</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/all.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".box2,.box3,.box4").hide();
+			$(".conMenu>ul>li").eq(0).click(function(){
+				$(".box1").show();
+				$(".box2").hide();
+				$(".box3").hide();
+				$(".box4").hide();
+			})
+			$(".conMenu>ul>li").eq(1).click(function(){
+				$(".box1").hide();
+				$(".box2").show();
+				$(".box3").hide();
+				$(".box4").hide();
+			})
+			$(".conMenu>ul>li").eq(2).click(function(){
+				$(".box1").hide();
+				$(".box2").hide();
+				$(".box3").show();
+				$(".box4").hide();
+			})
+			$(".conMenu>ul>li").eq(3).click(function(){
+				$(".box1").hide();
+				$(".box2").hide();
+				$(".box3").hide();
+				$(".box4").show();
+			})
+		})
+	</script>
+</head>
+<body>
+<header class="header sub now">
+	<div class="headerWrap clearfix">
+		<nav class="topMenu">
+			<h1 class="logo"><a href="./index.html">LOGO</a></h1>
+			<ul class="clearfix">
+				<li class="mainmenu"><a href="#">상영작</a></li>
+				<li class="mainmenu"><a href="./reserved.html">예매</a>
+				</li>
+				<li class="mainmenu"><a href="#">이벤트</a>
+				</li>
+				<li class="mainmenu"><a href="#">혜택</a>
+				</li>
+				<li class="mainmenu"><a href="#">스토어</a>
+				</li>
+				<li class="language"><a href="#">KOR</a></li>
+				<li class="language"><a href="#">ENG</a></li>
+			</ul>
+		</nav>
+		<div class="menutxt">
+			<h1>전체영화</h1>
+		</div>
+	</div>
+</header>
+<div class="conMenu">
+	<div class="top"><a href="#">TOP</a></div>
+	<ul class="clearfix">
+		<li>박스오피스</li>
+		<li>상영예정작</li>
+		<li>필름소사이어티</li>
+		<li>클래식 소사이어티</li>
+	</ul>
+	<div class="box1 home">
+		<br>
+		<a href="./index.html">HOME</a> > <a href="#">상영작</a>
+		<img src="images/subtwo.png" alt="">
+	</div>
+	<div class="box2 home">		
+		<br>
+		<a href="./index.html">HOME</a> > <a href="#">상영작</a>
+		<img src="images/subone.png" alt="">
+	</div>
+	<div class="box3 home">
+		<br>
+		<a href="./index.html">HOME</a> > <a href="#">상영작</a>
+		<img src="images/subthree.png" alt="">
+	</div>
+	<div class="box4 home">
+		<br>
+		<a href="./index.html">HOME</a> > <a href="#">상영작</a>
+		<img src="images/subfour.png" alt="">
+	</div>
+</div>
+<footer>
+	<div class="footerWrap clearfix">
+		<ul class="footer clearfix">
+			<li><a href="#">이용약관</a></li>
+			<li><a href="#">개인정보</a></li>
+			<li><a href="#">취급방침</a></li>
+			<li><a href="#">사이트맵</a></li>
+			<li><a href="#">고객센터</a></li>
+			<li><a href="#">공고 및 제휴문의</a></li>
+			<li><p>123-456 서울특별시 구로구 구로동 (주)시네마틱 사업자 등록번호:123-45-6778910 대표이사 : 홍길동 대표번호 : 02 - 1234 - 5678<br>
+				COPYRIGHTⓒ2020 CINEMATIC TOUR. ALL RIGHTS RESERVED.</p></li>
+		</ul>
+		<ul class="sns clearfix">
+			<li><a href="#"><img src="images/facebook.png" alt=""></a></li>
+			<li><a href="#"><img src="images/insta.png" alt=""></a></li>
+			<li><a href="#"><img src="images/youtube.png" alt=""></a></li>
+			<li><a href="#"><img src="images/twitter.png" alt=""></a></li>
+		</ul>
+	</div>
+</footer>
+</body>
+</html>

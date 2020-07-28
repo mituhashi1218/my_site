@@ -24,10 +24,10 @@
 			$(".prevBtn").click(function(){
 				mySlider.goToPrevSlide();
 			});
-			$(".nextBtn").click(function(){
+			$(".nextBtnTwo").click(function(){
 				mySliderTwo.goToNextSlide();
 			});
-			$(".prevBtn").click(function(){
+			$(".prevBtnTwo").click(function(){
 				mySliderTwo.goToPrevSlide();
 			});
 		});
@@ -35,7 +35,7 @@
 </head>
 <body>
 <!-- header -->
-<header class="header">
+<header class="header main">
 	<ul class="slider">
 		<li>
 			<img src="images/mega11.jpg" alt="">
@@ -57,14 +57,14 @@
 		<nav class="topMenu">
 			<h1 class="logo"><a href="#">LOGO</a></h1>
 			<ul class="clearfix">
-				<li><a href="#">상영작</a>
-				<li><a href="#">예매</a>
+				<li class="mainmenu"><a href="./theater.html">상영작</a>
+				<li class="mainmenu"><a href="./reserved.html">예매</a>
 				</li>
-				<li><a href="#">이벤트</a>
+				<li class="mainmenu"><a href="#">이벤트</a>
 				</li>
-				<li><a href="#">혜택</a>
+				<li class="mainmenu"><a href="#">혜택</a>
 				</li>
-				<li><a href="#">스토어</a>
+				<li class="mainmenu"><a href="#">스토어</a>
 				</li>
 				<li class="language"><a href="#">KOR</a></li>
 				<li class="language"><a href="#">ENG</a></li>
@@ -73,7 +73,7 @@
 		<div class="contents">
 			<ul>
 				<div><a href="#" class="line1"><img src="images/calender.png" alt=""><p>상영시간표</p></a></div>
-				<div><a href="#" class="line1"><img src="images/slate.png" alt=""><p>영화목록</p></a></div>
+				<div><a href="./theater.html" class="line1"><img src="images/slate.png" alt=""><p>영화목록</p></a></div>
 				<div><a href="#" class="line1"><img src="images/ticket.png" alt=""><p>빠른예매</p></a></div>
 				<div><a href="#" class="line1"><img src="images/theater.png" alt=""><p>영화관</p></a></div>
 				<div><a href="#" class="line1"><img src="images/magazine.png" alt=""><p>매거진</p></a></div>
@@ -150,10 +150,10 @@
 				</li>
 			</ul>
 		</div>
-		<div class="nextBtn">
+		<div class="nextBtnTwo">
 		<img src="images/next.png" alt="next">
 		</div>
-		<div class="prevBtn">
+		<div class="prevBtnTwo">
 		<img src="images/prev.png" alt="prev">
 		</div>
 	</div>
