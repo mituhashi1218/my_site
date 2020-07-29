@@ -6,40 +6,58 @@
 	<title>reserved</title>
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/all.css">
 	<link rel="stylesheet" href="css/jquery.bxslider.css">
 	<script src="js/jquery-3.1.1.min.js"></script>
 	<script src="js/jquery.bxslider.js"></script>
 	<script>
 		$(document).ready(function(){
-			$(".box2,.box3").hide();
-			$(".conMenuTwo>ul>li").eq(0).click(function(){
+			$(".box2,.box3,.box4,.box5").hide();
+			$(".conMenuThree>ul>li").eq(0).click(function(){
 				$(".box1").show();
 				$(".box2").hide();
 				$(".box3").hide();
+				$(".box4").hide();
+				$(".box5").hide();
 			})
-			$(".conMenuTwo>ul>li").eq(1).click(function(){
+			$(".conMenuThree>ul>li").eq(1).click(function(){
 				$(".box1").hide();
 				$(".box2").show();
 				$(".box3").hide();
+				$(".box4").hide();
+				$(".box5").hide();
 			})
-			$(".conMenuTwo>ul>li").eq(2).click(function(){
+			$(".conMenuThree>ul>li").eq(2).click(function(){
 				$(".box1").hide();
 				$(".box2").hide();
 				$(".box3").show();
+				$(".box4").hide();
+				$(".box5").hide();
+			})
+			$(".conMenuThree>ul>li").eq(3).click(function(){
+				$(".box1").hide();
+				$(".box2").hide();
+				$(".box3").hide();
+				$(".box4").show();
+				$(".box5").hide();
+			})
+			$(".conMenuThree>ul>li").eq(4).click(function(){
+				$(".box1").hide();
+				$(".box2").hide();
+				$(".box3").hide();
+				$(".box4").hide();
+				$(".box5").show();
 			})
 		})
 	</script>
 </head>
 <body>
-<header class="header sub reserved">
-	<img src="images/reserved.jpg" alt="">
+<header class="header sub event">
 	<div class="headerWrap clearfix">
 		<nav class="topMenu">
 			<h1 class="logo"><a href="./index.html">LOGO</a></h1>
 			<ul class="clearfix">
 				<li class="mainmenu"><a href="./theater.html">상영작</a></li>
-				<li class="mainmenu"><a href="#">예매</a>
+				<li class="mainmenu"><a href="./reserved.html">예매</a>
 				</li>
 				<li class="mainmenu"><a href="./event.html">이벤트</a>
 				</li>
@@ -52,7 +70,7 @@
 			</ul>
 		</nav>
 		<div class="txt">
-			<h1>예매</h1>
+			<h1>이벤트</h1>
 		</div>
 	</div>
 	<div class="toggleMenu">
@@ -61,30 +79,44 @@
 				<div class="bar3"></div>
 	</div>
 </header>
-<div class="conMenuTwo">
+<div class="conMenuThree">
 	<div class="top"><a href="#">TOP</a></div>
 	<ul class="clearfix">
-		<li>빠른예매</li>
-		<li>상영시간표</li>
-		<li>더 부티크 프라이빗 예매</li>
+		<li>전체</li>
+		<li>시네Pick</li>
+		<li>영화</li>
+		<li>극장</li>
+		<li>시사회/무대인사</li>
 	</ul>
-	<div class="box1 subreserved">
+	<div class="box1 event">
 		<br>
-		<a href="./index.html">HOME</a> > <a href="#">예매</a>
-		<h2>빠른예매</h2>
-		<img src="images/reservedone.jpg" alt="">
+		<a href="./index.html">HOME</a> > <a href="#">이벤트</a>
+		<h2>전체</h2>
+		<img src="images/eventone.jpg" alt="">
 	</div>
-	<div class="box2 subreserved">		
+	<div class="box2 event">		
 		<br>
-		<a href="./index.html">HOME</a> > <a href="#">예매</a>
-		<h2>상영시간표</h2>
-		<img src="images/reservedtwo.png" alt="">
+		<a href="./index.html">HOME</a> > <a href="#">이벤트</a>
+		<h2>시네Pick</h2>
+		<img src="images/eventtwo.jpg" alt="">
 	</div>
-	<div class="box3 subreserved">
+	<div class="box3 event">
 		<br>
-		<a href="./index.html">HOME</a> > <a href="#">예매</a>
-		<h2>더 부티크 프라이빗 예매</h2>
-		<img src="images/reservedthree.png" alt="">
+		<a href="./index.html">HOME</a> > <a href="#">이벤트</a>
+		<h2>영화</h2>
+		<img src="images/eventthree.jpg" alt="">
+	</div>
+	<div class="box4 event">
+		<br>
+		<a href="./index.html">HOME</a> > <a href="#">이벤트</a>
+		<h2>극장</h2>
+		<img src="images/eventfour.jpg" alt="">
+	</div>
+	<div class="box5 event">
+		<br>
+		<a href="./index.html">HOME</a> > <a href="#">이벤트</a>
+		<h2>시사회/무대인사</h2>
+		<img src="images/eventfive.jpg" alt="">
 	</div>
 </div>
 <footer>
