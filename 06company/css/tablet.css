@@ -33,13 +33,24 @@ header .toggleMenu{
 }
 header .toggleMenu div{
 	width: 35px;height: 5px;background: #fff;
-	position: absolute;border-radius:3px;;
+	position: absolute;border-radius:3px;transition:0.3s
 }
 header .toggleMenu .bar1{top:11px;}
 header .toggleMenu .bar2{top:21px;}
 header .toggleMenu .bar3{top:31px;}
+header .toggleMenu.change div.bar1{top: 20px; transform:rotate(-45deg);}
+header .toggleMenu.change div.bar2{opacity:0;}
+header .toggleMenu.change div.bar3{top: 20px;transform:rotate(45deg);}
+header .view{width: 100%;height: 100%;background-color:rgba(0,0,0,0.9);transition:0.3s;left: -100%;
+  position: absolute;top: 0;}
 .topMenu{display:none}
 
+header .view.tablet ul>li.tmain{float: left;display: block;text-align: center;
+  width: 20%;height:330px;color:#fff;margin-top: 80px;}
+header .view.tablet ul>li.tmain>h2{border-bottom: 2px solid #fff;padding-bottom: 10px;font-size:1.2em;}
+header .view.tablet ul>li.tmain>h2>a{color:#fff;}
+header .view.tablet ul>li.tmain>a{color:#fff;line-height: 40px;font-size:0.8em;}
+header .view.tablet ul>li.tmain>a:hover{opacity:0.8}
 header .bx-wrapper {
     -moz-box-shadow: 0 0 0 #ccc;
     -webkit-box-shadow: 0 0 0 #ccc;
@@ -162,7 +173,22 @@ footer .sns li:last-child{margin-right: 0;}*/
 .box1>h2,.box2>h2,.box3>h2,.box4>h2,.box5>h2{
     text-align: center;border-top: 1px solid #000;padding-top: 20px;
     color:#513397;}
-
+header .view.tablet ul>h1{display:none}
+header .view.tablet ul{width:800px;margin:0 auto;}
+header .view.tablet ul>li.tmenu{float: left;display: block;text-align: center;
+  width: 25%;height:330px;color:#fff;}
+header .view.tablet ul>li.on{text-align: center;display: block;width: 100%;height: 50px;color:#fff;
+margin-top: 70px;margin-bottom:70px;}
+header .view.tablet ul>li.on h1{padding-bottom: 20px;}
+header .view.tablet ul>li.on a.logo{color:#fff;font-weight: bold;}
+header .view.tablet ul>li.on h2.home{display:none}
+header .view.tablet ul>li>h2{border-bottom: 2px solid #fff;padding-bottom: 10px;font-size:1.2em;}
+header .view.tablet ul>li>h2>a{color:#fff;}
+header .view.tablet ul>li>a{color:#fff;line-height: 40px;font-size:0.8em;}
+header .view.tablet ul>li>a:hover{opacity:0.8}
+header .view.tablet ul li.on:first-child a{color:#fff;font-weight: bold;font-size:1.4em;}
+header .view.tablet ul>li.on:first-child h1{font-size:1.5em;margin-bottom: 30px;}
+header .view.tablet ul>li>h2{border-bottom: 2px solid #fff;padding-bottom: 10px;font-size:1.2em;}
 
                        /*sub1 theater*/
 header.sub{height: 600px;position: relative;}
@@ -177,6 +203,7 @@ header div.menutxt h1{color:#fff;}
 .box1 img,.box2 img,.box3 img,.box4 img{width:100%;}
 .home a{font-weight: bold;font-size:13px;margin-bottom: 15px;}
 .home a:hover{border-bottom: 1px solid #000;}
+
 
                        /*sub2 reserved*/
 header.sub{height: 600px}

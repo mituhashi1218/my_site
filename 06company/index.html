@@ -6,7 +6,6 @@
 	<title>문서 제목</title>
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/all.css">
 	<link rel="stylesheet" href="css/jquery.bxslider.css">
 	<script src="js/jquery-3.1.1.min.js"></script>
 	<script src="js/jquery.bxslider.js"></script>
@@ -66,10 +65,69 @@
 			<img src="images/prev.png" alt="prev">
 	</div>
 	<div class="toggleMenu">
-				<div class="bar1"></div>
-				<div class="bar2"></div>
-				<div class="bar3"></div>
+		<div class="bar1"></div>
+		<div class="bar2"></div>
+		<div class="bar3"></div>
 	</div>
+	<div class="view tablet tmain">
+		<ul class="clearfix">
+			<li class="up tmain">
+				<h2><a href="./theater.html">상영작</a></h2>
+					<a href="./theater.html" class="first">박스오피스</a><br>
+					<a href="./theater.html">상영예정작</a><br>
+					<a href="./theater.html">필름소사이어티</a><br>
+					<a href="./theater.html">클래식 소사이어티</a>
+			</li>
+			<li class="up tmain">
+				<h2><a href="./reserved.html">예매</a></h2>
+				<a href="./reserved.html" class="first">빠른예매</a><br>
+				<a href="./reserved.html" class="first">상영시간표</a><br>
+				<a href="./reserved.html" class="first">더 부티크 프라이빗 예매</a>
+			</li>
+			<li class="up tmain">
+				<h2><a href="./event.html">이벤트</a></h2>
+				<a href="./event.html" class="first">전체</a><br>
+				<a href="./event.html" class="first">시네Pick</a><br>
+				<a href="./event.html" class="first">영화</a><br>
+				<a href="./event.html" class="first">극장</a><br>
+				<a href="./event.html" class="first">시사회/무대인사</a>
+			</li>
+			<li class="down tmain">
+				<h2><a href="./membership.html">혜택</a></h2>
+				<a href="./membership.html" class="first">멤버십 안내</a><br>
+				<a href="./membership.html" class="first">VIP LOUNGE</a>
+			</li>
+			<li class="down tmain">
+				<h2><a href="./store.html">스토어</a></h2>
+				<a href="./store.html" class="first">새로운 상품</a><br>
+				<a href="./store.html" class="first">메가 티켓</a><br>
+				<a href="./store.html" class="first">팝콘/음료/굿즈</a>
+			</li>
+		</ul>
+	</div>
+	<script>
+		var tMenu = document.querySelectorAll(".toggleMenu");
+		var view = document.getElementsByClassName("view");
+
+		//tMenu[0].onclick = change; //click event 등록
+
+		//tMenu[0].addEventListener("이벤트이름",함수이름);
+		tMenu[0].addEventListener("click",change);
+
+		function change(){
+			var toggle = tMenu[0].getAttribute("class");  //attr("class")
+			if(toggle == "toggleMenu"){
+				tMenu[0].setAttribute("class","toggleMenu change");
+				view[0].style.left ="0";
+			}else{
+				tMenu[0].setAttribute("class","toggleMenu");
+				view[0].style.left = "-100%";
+			}
+		}
+		// tMenu[0].onclick = change;
+		// function change(){}
+
+	</script>
 	<div class="headerWrap clearfix">
 		<nav class="topMenu">
 			<h1 class="logo"><a href="#">LOGO</a></h1>

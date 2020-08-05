@@ -10,17 +10,37 @@ header.main h3:after{content:"";display: block;width: 200px;height: 2px;backgrou
 header.main .slider_txt p{padding-top: 20px;font-size:0.7em;}
 
 header .toggleMenu{
-	float: right;
-	width: 50px;height: 50px;position: relative;position: absolute;
-	cursor:pointer;z-index:1;display: block;top: 10px;left: 50px;
+  float: right;
+  width: 50px;height: 50px;position: relative;position: absolute;
+  cursor:pointer;z-index:1;display: block;top:25px;left:35px;
 }
 header .toggleMenu div{
-	width: 35px;height: 5px;background: #fff;
-	position: absolute;border-radius:3px;;
+  width: 35px;height: 5px;background: #fff;
+  position: absolute;border-radius:3px;transition:0.3s
 }
 header .toggleMenu .bar1{top:11px;}
 header .toggleMenu .bar2{top:21px;}
 header .toggleMenu .bar3{top:31px;}
+header .toggleMenu.change div.bar1{top: 20px; transform:rotate(-45deg);}
+header .toggleMenu.change div.bar2{opacity:0;}
+header .toggleMenu.change div.bar3{top: 20px;transform:rotate(45deg);}
+header .view{width: 100%;height: 100%;background-color:rgba(0,0,0,0.9);transition:0.3s;left: -100%;
+  position: absolute;top: 0;}
+header .view ul{width:300px;margin:0 auto;}
+header .view ul>li{float: left;display: block;text-align: center;
+height:30px;color:#fff;}
+header .view ul>li.up{width: 33.333%;margin-top: 60px;}
+header .view ul>li.down{width: 50%;padding-top:40px;}
+header .view ul>li.on h1,.view ul>li.on>a{display:none}
+header .view ul>li>h2>a{color:#fff;display: block;font-size:0.9em;transition:0.3s}
+/*header .view ul>li>h2>a:hover{opacity:0.8;border-bottom: 1px solid #fff;}*/
+/*header .view ul>li>h2{border-bottom: 2px solid #fff;padding-bottom:3px;font-size:1em;}
+header .view ul>li>a{color:#fff;line-height:10px;font-size:0.6em;}
+header .view ul>li>a:hover{opacity:0.8}*/
+header .view ul>li>a.first{display: none}
+  header .view ul>li>h2>a:hover{opacity:0.8;border-bottom: 2px solid #fff;}
+
+
 .topMenu{display:none}
 header .bx-wrapper {
     -moz-box-shadow: 0 0 0 #ccc;
@@ -157,6 +177,8 @@ header div.menutxt h1{color:#fff;}
 .box1 img,.box2 img,.box3 img,.box4 img{width:100%;}
 .home a{font-weight: bold;font-size:13px;margin-bottom: 15px;}
 .home a:hover{border-bottom: 1px solid #000;}
+header.sub .view>ul>h1{text-align: center;color:#fff;font-size:1.5em;
+  margin-top: 100px;border-bottom: 3px solid #fff;padding-bottom: 30px;}
 
                        /*sub2 reserved*/
 header.sub{height: 600px;}
