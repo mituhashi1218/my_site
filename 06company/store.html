@@ -131,6 +131,21 @@
 		// function change(){}
 
 	</script>
+	<script>
+	$(function(){
+		var winHeight = $(document).height();
+		$(".winHeight").html(winHeight);
+		$(window).scroll(function(){
+			var scrollY = $(window).scrollTop();
+			$(".scrollY").html(scrollY);
+			if(winHeight/4 > scrollY){
+				$(".top").addClass("view");
+			}else{
+				$(".top").removeClass("view");
+			}
+		});		
+	});
+</script>
 </header>
 <div class="conMenuFive">
 	<ul class="clearfix">
@@ -159,7 +174,7 @@
 </div>
 <footer>
 	<div class="footerWrap clearfix">
-		<div class="top"><a href="#">TOP</a></div>
+		
 		<ul class="footer clearfix">
 			<li><a href="#">이용약관</a></li>
 			<li><a href="#">개인정보</a></li>
@@ -178,5 +193,6 @@
 		</ul>
 	</div>
 </footer>
+<div class="top"><a href="#">TOP</a></div>
 </body>
 </html>

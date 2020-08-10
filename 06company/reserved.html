@@ -45,6 +45,21 @@
 			}
 		}
 	</script>
+	<script>
+	$(function(){
+		var winHeight = $(document).height();
+		$(".winHeight").html(winHeight);
+		$(window).scroll(function(){
+			var scrollY = $(window).scrollTop();
+			$(".scrollY").html(scrollY);
+			if(winHeight/4 > scrollY){
+				$(".top").addClass("view");
+			}else{
+				$(".top").removeClass("view");
+			}
+		});		
+	});
+</script>
 </head>
 <body>
 <header class="header sub reserved">
@@ -161,7 +176,7 @@
 </div>
 <footer>
 	<div class="footerWrap clearfix">
-		<div class="top"><a href="#">TOP</a></div>
+		
 		<ul class="footer clearfix">
 			<li><a href="#">이용약관</a></li>
 			<li><a href="#">개인정보</a></li>
@@ -179,6 +194,7 @@
 			<li><a href="#"><img src="images/twitter.png" alt=""></a></li>
 		</ul>
 	</div>
+	<div class="top"><a href="#">TOP</a></div>
 </footer>
 </body>
 </html>

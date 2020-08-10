@@ -273,6 +273,21 @@
 		</ul>
 	</div>
 </div>
+<script>
+	$(function(){
+		var winHeight = $(document).height();
+		$(".winHeight").html(winHeight);
+		$(window).scroll(function(){
+			var scrollY = $(window).scrollTop();
+			$(".scrollY").html(scrollY);
+			if(winHeight/4 > scrollY){
+				$(".top").addClass("view");
+			}else{
+				$(".top").removeClass("view");
+			}
+		});		
+	});
+</script>
 <footer>
 	<div class="footerWrap clearfix">
 		<ul class="footer clearfix">
@@ -293,5 +308,6 @@
 		</ul>
 	</div>
 </footer>
+<div class="top view"><a href="#">TOP</a></div>
 </body>
 </html>
