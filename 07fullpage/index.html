@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>Main</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/jquery.pageScroll3d.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/simple-lightbox.min.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.mousewheel.min.js"></script>
+	<script src="js/jquery.pageScroll3d.min.js"></script>
+	<script src="js/jquery.fullPage.js"></script>
+	<script src="js/wow.js"></script>
+	<script src="js/simple-lightbox.jquery.min.js"></script>
+	<script src="js/simple-lightbox.min.js"></script>
+	<script>
+
+
+		new WOW().init()
+
+		$(document).ready(function(){
+			$(".main-content").scroll3D(); //
+			$(".box2,box3,box4").hide();
+			// $(".page2>ul>li").eq(0).click(function(){
+			// 	$(".box1").show();
+			// 	$(".box2").hide();
+			// })
+			// $(".page2>ul>li").eq(1).click(function(){
+			// 	$(".box1").hide();
+			// 	$(".box2").show();
+			// })
+
+			$(".page2>ul>li").click(function(){
+				var i = $(this).index();
+				console.log(i)
+				$(".page2 .bView").hide().eq(i).show();
+				$(".page2>ul>li").removeClass("active").eq(i).addClass("active");
+			});
+			$(".page3>ul>li").click(function(){
+				var i = $(this).index();
+				console.log(i)
+				$(".page3 .bView").hide().eq(i).show();
+				$(".page3>ul>li").removeClass("active").eq(i).addClass("active");
+			});
+			var gallery = new SimpleLightbox('.gallery', { 
+			    /* options */ 
+			});
+
+			// As A jQuery Plugin -->
+			var gallery = $('.gallery').simpleLightbox({
+			    /* options */
+			    overlay:true,sourceAttr:'href',nav:true
+
+
+
+			});
+
+		});
+	</script>
+
+	<style>
+
+	/*script*/
+		html, body {
+    background: #c0c0c0;
+    font: 100% Helvetica, sans-serif;}
+	.s3d__side:nth-child(1) {background: #fff;}
+	.s3d__side:nth-child(2) {background-image: url(images/enter1.jpg);background-repeat:no-repeat;background-position:center;background-size:cover;}
+	.s3d__side:nth-child(3) {background: #fff;}
+	.s3d__side:nth-child(4) {background: #fff;}
+	.s3d__side:nth-child(5) {background: #fff;}
+
+	.main-content section h1{display:none}
+	.s3d__navigation-list{animation-name:menu;animation-duration:2.5s;}
+	.s3d__navigation-list a{color:#5a5a5a;}
+	@keyframes menu{
+		from{opacity: 0;};
+		to{opacity: 1;}
+	}
+
+	/*page1*/
+
+
+	section#page1 img{position: absolute;top:50%;left: 50%;transform:translate(-50%,-50%);z-index:1;animation-name:mainlogo;animation-duration:2.5s;animation-delay:20s;
+		opacity:0;animation-fill-mode:forwards;}
+	@keyframes mainlogo{
+		0%{opacity: 0;}
+		80%{opacity: 0;}
+		90%{opacity: 0.3;}
+		95%{opacity: 0.7;}
+		100%{opacity: 1;}
+	}
+	section#page1 .video{animation-name:video;animation-duration:22s;opacity: 0;}
+	@keyframes video{
+		0%{opacity:1}
+		90%{opacity:1}
+		100%{opacity: 0;}
+	}
+	/*page2*/
+
+
+		section#page2{}
+		section#page2 ul{width:30%;height:100px;margin:0 auto;}
+		section#page2 ul li{width:50%;line-height: 40px;float: left;display: block;text-align: center;padding-top: 30px;cursor: pointer;}
+		section#page2 ul li.active{font-weight: bold;color:#e9e9e9;}
+		section#page2 .box1{width: 80%;height: 100%;margin:0 auto;}
+		section#page2 .box1{text-align: center;animation-name:boxOne;animation-duration:1.5s;opacity: 1;}
+		section#page2 .box1 li{margin-top: 130px;}
+		section#page2 .box1 h2{font-size:2.5em;color:#e9e9e9;text-align:left}
+		section#page2 .box1 li p{font-size:13px}
+		section#page2 .box2 h2{font-size:2.5em;color:#e9e9e9;text-align:left}
+		section#page2 .box2{width: 80%;height: 100%;margin:0 auto;animation-name:boxTwo;animation-duration:1.5s;opacity: 1;position: relative;}
+		section#page2 .box2 iframe{top:70px;left: 50%;
+			transform:translateX(-50%);position: absolute;box-shadow:0 0 5px 0}
+		section#page2 .box2 li{text-align: center;color:#000;margin-top: 450px;height: 100px;}
+		section#page2 .box2 li p{font-size:1.1em}
+		@keyframes boxTwo{
+			from{opacity: 0;};
+			to{opacity: 1;}
+		}
+
+		section#page2 .box1 img{}
+		section#page2 .box1 .logo{}
+		@keyframes boxOne{
+			from{opacity: 0;};
+			to{opacity: 1;}
+		}
+
+
+		/*page3*/
+		section#page3{bg}
+		section#page3 ul{width:30%;height:100px;margin:0 auto;}
+		section#page3 ul li{width:50%;line-height: 40px;float: left;display: block;text-align: center;padding-top: 30px;cursor: pointer;}
+		section#page3 ul li.active{font-weight: bold;color:#595959;}
+		section#page3 .box1{width: 80%;height: 100%;margin:0 auto;}
+		section#page3 .box2{width: 80%;height: 100%;margin:0 auto;}
+		section#page3 .bView h2{font-size:2.5em;color:#595959;text-align:left}
+		section#page3 .box1 ul{width: 100%;}
+		section#page3 .box1 li{width: 25%;height: 80px;float: left;display: block;}
+		section#page3 .box1 li img{width: 100%;height:200px;}
+		/*section#page3 .box1 li:first-child{background-image: url(images/girl01.jpg);background-repeat:no-repeat;background-size:cover;background-position:center;}*/
+
+	/*page3*/
+	</style>
+
+
+</head>
+<body>
+	<main class="main-content">
+
+		<!-- section1 -->
+
+		<section id="page1">
+			<h1>Home</h1>
+			<video width="100%" height="100%" autoplay muted class="video">
+			  <source src="images/0809.mp4" type="video/mp4">
+			</video>
+			<img src="images/logo2.jpg" alt="">
+		</section>
+
+		<!-- section2 -->
+
+		<section id="page2" class="page2">
+			<h1>About</h1>
+			<ul class="clearfix">
+				<li class="active">About</li>
+				<li>Location</li>
+			</ul>
+				<div class="box1 bView">
+					<h2>About</h2>
+					<img src="images/logo.jpg" alt="" class="logo"><br>
+					<li>
+						<img src="images/apper1.png" alt=""><br>
+						<p>CINEST STUDIO는 1인 대표 크리에이티브 디렉터의 사진영상 전문스튜디오 입니다.<br>인간의 삶을 사진과 영상으로 시네마틱하게 표현하고 기록하며<br>인간이 사용하는 제품을 손에 이끌리게 표현하고 기록합니다.<br>인간의 아름다운 cinematic life를 지향합니다.</p><br>
+						<img src="images/apper2.png" alt="">
+					</li>
+				</div>
+				<div class="box2 bView">
+					<h2>Location</h2>
+					<li><p>
+					서울 마포구 토정로 53-13 B02, CINEST STUDIO<br>
+					53-13, Tojeong-ro, Mapo-gu, Seoul, Republic of Korea<br>ZIP CODE : 04083 <br> TEL : 070-8868-2222</p></li>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.3971128680614!2d126.91456511558795!3d37.54570673307779!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c98d3895f518f%3A0xed358f7302524526!2z7ISc7Jq47Yq567OE7IucIOuniO2PrOq1rCDtlansoJXrj5kgMzU5LTE2!5e0!3m2!1sko!2skr!4v1597308531707!5m2!1sko!2skr" width="90%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+					</div>
+		</section>
+		<section id="page3" class="page3">
+			<h1>Gallery</h1>
+			<ul class="clearfix">
+				<li class="active">Photo</li>
+				<li>Film</li>
+			</ul>
+			<div class="box1 bView">
+				<h2>Photo</h2>
+				<ul class="clearfix">
+					<li><a href="images/enter2.jpg" class="gallery"><img src="images/enter2.jpg" alt=""></a></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+			<div class="box2 bView">
+				<h2>Film</h2>
+			</div>
+		</section>
+		
+		<section id="page4">
+			<h1>Product</h1>
+			<ul class="clearfix">
+				<li class="active">Photo</li>
+				<li>Film</li>
+			</ul>
+		</section>
+	</main>
+</body>
+</html>
