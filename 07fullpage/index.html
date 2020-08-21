@@ -8,30 +8,26 @@
 	<link rel="stylesheet" href="css/jquery.pageScroll3d.min.css">
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/simple-lightbox.min.css">
+	<link rel="stylesheet" href="css/all.css">
+	<link rel="stylesheet" href="slick/slick.css">
+	<link rel="stylesheet" href="slick/slick-theme.css">
+	<link rel="stylesheet" href="video/grt-youtube-popup.css">
+	<link rel="stylesheet" href="css/style.css">
 	<script src="js/jquery-3.1.1.min.js"></script>
 	<script src="js/jquery.mousewheel.min.js"></script>
 	<script src="js/jquery.pageScroll3d.min.js"></script>
-	<script src="js/jquery.fullPage.js"></script>
 	<script src="js/wow.js"></script>
 	<script src="js/simple-lightbox.jquery.min.js"></script>
 	<script src="js/simple-lightbox.min.js"></script>
+	<script src="slick/slick.min.js"></script>
+	<script src="video/grt-youtube-popup.js"></script>
 	<script>
 
-
-		new WOW().init()
+	new WOW().init()
 
 		$(document).ready(function(){
 			$(".main-content").scroll3D(); //
 			$(".box2,box3,box4").hide();
-			// $(".page2>ul>li").eq(0).click(function(){
-			// 	$(".box1").show();
-			// 	$(".box2").hide();
-			// })
-			// $(".page2>ul>li").eq(1).click(function(){
-			// 	$(".box1").hide();
-			// 	$(".box2").show();
-			// })
-
 			$(".page2>ul>li").click(function(){
 				var i = $(this).index();
 				console.log(i)
@@ -44,124 +40,102 @@
 				$(".page3 .bView").hide().eq(i).show();
 				$(".page3>ul>li").removeClass("active").eq(i).addClass("active");
 			});
-			var gallery = new SimpleLightbox('.gallery', { 
+			$(".page4>ul>li").click(function(){
+				var i = $(this).index();
+				console.log(i)
+				$(".page4 .bView").hide().eq(i).show();
+				$(".page4>ul>li").removeClass("active").eq(i).addClass("active");
+			});
+			var gallery = new SimpleLightbox('.gallery a', { 
 			    /* options */ 
 			});
-
-			// As A jQuery Plugin -->
-			var gallery = $('.gallery').simpleLightbox({
-			    /* options */
-			    overlay:true,sourceAttr:'href',nav:true
-
-
-
+			$('.slider').slick({
+			  prevArrow: $('.slick-prev'),
+			  nextArrow: $('.slick-next'),
+			  dots: true,
+			  slidesToShow: 3,
+			  slidesToScroll: 1,
+			  autoplay: true,
+			  autoplaySpeed: 2000,
+			  responsive: [
+			    {
+			      breakpoint: 1024,
+			      settings: {
+			        slidesToShow: 2,
+			        slidesToScroll: 1,
+			        dots: true
+			      }
+			    },
+			    {
+			      breakpoint: 600,
+			      settings: {
+			        slidesToShow: 1,
+			        slidesToScroll: 1
+			      }
+			    },
+			    {
+			      breakpoint: 480,
+			      settings: {
+			        slidesToShow: 1,
+			        slidesToScroll: 1
+			      }
+			    }
+			    // You can unslick at a given breakpoint now by adding:
+			    // settings: "unslick"
+			    // instead of a settings object
+			  ]
 			});
+			$(".youtube").grtyoutube({
+			  autoPlay:true,theme:"dark"
+			});
+			$(".toggleMenu").click(function(){
+				var toggle = $(this).attr("class")
 
+				if(toggle == "toggleMenu"){
+					$(this).addClass("change");
+					$(".menu").stop().animate({top:0},500);
+				}else{
+					$(this).removeClass("change");
+					$(".menu").stop().animate({top:"-100%"},500);
+				}
+			});
 		});
+
 	</script>
-
-	<style>
-
-	/*script*/
-		html, body {
-    background: #c0c0c0;
-    font: 100% Helvetica, sans-serif;}
-	.s3d__side:nth-child(1) {background: #fff;}
-	.s3d__side:nth-child(2) {background-image: url(images/enter1.jpg);background-repeat:no-repeat;background-position:center;background-size:cover;}
-	.s3d__side:nth-child(3) {background: #fff;}
-	.s3d__side:nth-child(4) {background: #fff;}
-	.s3d__side:nth-child(5) {background: #fff;}
-
-	.main-content section h1{display:none}
-	.s3d__navigation-list{animation-name:menu;animation-duration:2.5s;}
-	.s3d__navigation-list a{color:#5a5a5a;}
-	@keyframes menu{
-		from{opacity: 0;};
-		to{opacity: 1;}
-	}
-
-	/*page1*/
-
-
-	section#page1 img{position: absolute;top:50%;left: 50%;transform:translate(-50%,-50%);z-index:1;animation-name:mainlogo;animation-duration:2.5s;animation-delay:20s;
-		opacity:0;animation-fill-mode:forwards;}
-	@keyframes mainlogo{
-		0%{opacity: 0;}
-		80%{opacity: 0;}
-		90%{opacity: 0.3;}
-		95%{opacity: 0.7;}
-		100%{opacity: 1;}
-	}
-	section#page1 .video{animation-name:video;animation-duration:22s;opacity: 0;}
-	@keyframes video{
-		0%{opacity:1}
-		90%{opacity:1}
-		100%{opacity: 0;}
-	}
-	/*page2*/
-
-
-		section#page2{}
-		section#page2 ul{width:30%;height:100px;margin:0 auto;}
-		section#page2 ul li{width:50%;line-height: 40px;float: left;display: block;text-align: center;padding-top: 30px;cursor: pointer;}
-		section#page2 ul li.active{font-weight: bold;color:#e9e9e9;}
-		section#page2 .box1{width: 80%;height: 100%;margin:0 auto;}
-		section#page2 .box1{text-align: center;animation-name:boxOne;animation-duration:1.5s;opacity: 1;}
-		section#page2 .box1 li{margin-top: 130px;}
-		section#page2 .box1 h2{font-size:2.5em;color:#e9e9e9;text-align:left}
-		section#page2 .box1 li p{font-size:13px}
-		section#page2 .box2 h2{font-size:2.5em;color:#e9e9e9;text-align:left}
-		section#page2 .box2{width: 80%;height: 100%;margin:0 auto;animation-name:boxTwo;animation-duration:1.5s;opacity: 1;position: relative;}
-		section#page2 .box2 iframe{top:70px;left: 50%;
-			transform:translateX(-50%);position: absolute;box-shadow:0 0 5px 0}
-		section#page2 .box2 li{text-align: center;color:#000;margin-top: 450px;height: 100px;}
-		section#page2 .box2 li p{font-size:1.1em}
-		@keyframes boxTwo{
-			from{opacity: 0;};
-			to{opacity: 1;}
-		}
-
-		section#page2 .box1 img{}
-		section#page2 .box1 .logo{}
-		@keyframes boxOne{
-			from{opacity: 0;};
-			to{opacity: 1;}
-		}
-
-
-		/*page3*/
-		section#page3{bg}
-		section#page3 ul{width:30%;height:100px;margin:0 auto;}
-		section#page3 ul li{width:50%;line-height: 40px;float: left;display: block;text-align: center;padding-top: 30px;cursor: pointer;}
-		section#page3 ul li.active{font-weight: bold;color:#595959;}
-		section#page3 .box1{width: 80%;height: 100%;margin:0 auto;}
-		section#page3 .box2{width: 80%;height: 100%;margin:0 auto;}
-		section#page3 .bView h2{font-size:2.5em;color:#595959;text-align:left}
-		section#page3 .box1 ul{width: 100%;}
-		section#page3 .box1 li{width: 25%;height: 80px;float: left;display: block;}
-		section#page3 .box1 li img{width: 100%;height:200px;}
-		/*section#page3 .box1 li:first-child{background-image: url(images/girl01.jpg);background-repeat:no-repeat;background-size:cover;background-position:center;}*/
-
-	/*page3*/
-	</style>
-
-
 </head>
 <body>
+		<!-- toggleMenu -->
+		<div class="toggleMenu">
+			<div class="bar1"></div>
+			<div class="bar2"></div>
+			<div class="bar3"></div>
+		</div>
+		<div class="menu clearfix">
+			<div class="main">
+			<ul class="clearfix">
+				<h3>CINEST STUDIO</h3>
+				<li><a href="#">HOME</a></li>
+				<li><a href="#">ABOUT US</a></li>
+				<li><a href="#">GALLERY</a></li>
+				<li><a href="#">PRODUCT</a></li>
+			</ul>
+			</div>
+		</div>
+	
+
 	<main class="main-content">
 
 		<!-- section1 -->
-
 		<section id="page1">
 			<h1>Home</h1>
 			<video width="100%" height="100%" autoplay muted class="video">
-			  <source src="images/0809.mp4" type="video/mp4">
+			  <source src="images/0809_short.mp4" type="video/mp4">
 			</video>
 			<img src="images/logo2.jpg" alt="">
 		</section>
 
-		<!-- section2 -->
 
+		<!-- section2 -->
 		<section id="page2" class="page2">
 			<h1>About</h1>
 			<ul class="clearfix">
@@ -176,6 +150,8 @@
 						<p>CINEST STUDIO는 1인 대표 크리에이티브 디렉터의 사진영상 전문스튜디오 입니다.<br>인간의 삶을 사진과 영상으로 시네마틱하게 표현하고 기록하며<br>인간이 사용하는 제품을 손에 이끌리게 표현하고 기록합니다.<br>인간의 아름다운 cinematic life를 지향합니다.</p><br>
 						<img src="images/apper2.png" alt="">
 					</li>
+					<li class="explain"><p>CINEST STUDIO (씨네스트 스튜디오)<br>사업자등록번호 194-06-01612
+					<div class="gap"></div>Copyright ⓒ 2020 CINEST studio All rights reserved.</p></li>
 				</div>
 				<div class="box2 bView">
 					<h2>Location</h2>
@@ -185,6 +161,8 @@
 					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.3971128680614!2d126.91456511558795!3d37.54570673307779!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c98d3895f518f%3A0xed358f7302524526!2z7ISc7Jq47Yq567OE7IucIOuniO2PrOq1rCDtlansoJXrj5kgMzU5LTE2!5e0!3m2!1sko!2skr!4v1597308531707!5m2!1sko!2skr" width="90%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 					</div>
 		</section>
+
+		<!-- section3 -->
 		<section id="page3" class="page3">
 			<h1>Gallery</h1>
 			<ul class="clearfix">
@@ -192,33 +170,322 @@
 				<li>Film</li>
 			</ul>
 			<div class="box1 bView">
-				<h2>Photo</h2>
-				<ul class="clearfix">
-					<li><a href="images/enter2.jpg" class="gallery"><img src="images/enter2.jpg" alt=""></a></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-				</ul>
+				<!-- <h2>Photo</h2> -->
+				<div class="clearfix gallery slider">
+							<div>
+								<a href="images/20200811_1.jpg" class="big" rel="rel1"><img src="images/img/img01.jpg" alt="" class="thumbnail"><div class="title"></div></a>
+							</div>
+							<div>
+								<a href="images/20200811_2.jpg" class="big" rel="rel1"><img src="images/img/img02.jpg" alt="" class="thumbnail"><div class="title"></div></a>
+							</div>
+							<div>
+								<a href="images/20200811_3.jpg" class="big" rel="rel1"><img src="images/img/img03.jpg" alt="" class="thumbnail"><div class="title"></div></a>
+							</div>
+							<div>
+								<a href="images/20200811_4.jpg" class="big" rel="rel1"><img src="images/img/img04.jpg" alt="" class="thumbnail"><div class="title"></div></a>
+							</div>
+							<div>
+								<a href="images/IMG_01.jpg" class="big" rel="rel1"><img src="images/img/img05.jpg" alt="" class="thumbnail"><div class="title"></div></a>
+							</div>
+							<div>
+								<a href="images/IMG_02.jpg" class="big" rel="rel1"><img src="images/img/img06.jpg" alt="" class="thumbnail"><div class="title"></div></a>
+							</div>
+							<div>
+								<a href="images/IMG2_01.jpg" class="big" rel="rel1"><img src="images/img/img07.jpg" alt="" class="thumbnail"><div class="title"></div></a>
+							</div>
+							<div>
+								<a href="images/IMG3_01.jpg" class="big" rel="rel1"><img src="images/img/img08.jpg" alt="" class="thumbnail"><div class="title"></div></a>
+							</div>
+				</div>
+				<div class="slick-arrow slick-prev">
+					<i class="fas fa-angle-left"></i>
+				</div>
+				<div class="slick-arrow slick-next">
+					<i class="fas fa-angle-right"></i>
+				</div>
 			</div>
-			<div class="box2 bView">
-				<h2>Film</h2>
+			<div class="box2 bView clearfix">
+					<a href="https://youtu.be/TmG57GNqoIY" class="youtube" youtubeid="TmG57GNqoIY"><img src="images/img/flimcover0.jpg" alt=""><p class="title"></p></a>
+					<a href="https://youtu.be/nOs9wQq5T1g" class="youtube" youtubeid="nOs9wQq5T1g"><img src="images/img/flimcover1.jpg" alt=""><p class="title"></p></a>
+					<a href="https://youtu.be/jUjVdrR0nP4" class="youtube" youtubeid="jUjVdrR0nP4"><img src="images/img/flimcover2.jpg" alt=""><p class="title"></p></a>
+					<a href="https://youtu.be/Xv14kUwgRU4" class="youtube" youtubeid="Xv14kUwgRU4"><img src="images/img/flimcover3.jpg" alt=""><p class="title"></p></a>
+					<a href="https://youtu.be/cJWGAqKVD4w" class="youtube" youtubeid="cJWGAqKVD4w"><img src="images/img/flimcover4.jpg" alt=""><p class="title"></p></a>
+					<a href="https://youtu.be/zBFg_0OfdFw" class="youtube" youtubeid="zBFg_0OfdFw"><div class="thumbnail"></div><p class="title"></p></a>
 			</div>
 		</section>
-		
-		<section id="page4">
+
+		<!-- section4 -->
+		<section id="page4" class="page4 clearfix">
 			<h1>Product</h1>
 			<ul class="clearfix">
-				<li class="active">Photo</li>
-				<li>Film</li>
+				<li class="active">Personal Line</li>
+				<li>Friendly Line</li>
+				<li>Lovely Line</li>
+				<li>Special Line</li>
 			</ul>
+			<div class="box1 bView clearfix">
+				<h2>CINEST Personal Line<br>
+				<span>CINEST는 인간의 아름다운 CINEMATIC LIFE를 지향합니다.</span></h2>
+				<table>
+				<tr>
+					<th>상품이름</th>
+					<th>CINEST SIGNATURE 증명사진</th>
+					<th>여권사진</th>
+					<th>CINEST 프로필 촬영</th>
+				</tr>
+				<tr>
+					<td>배경</td>
+					<td>4가지 signature color중 1 color</td>
+					<td>White Background</td>
+					<td>profile concept 상담 후<br>1 concept, 1wardrobe</td>
+				</tr>
+				<tr>
+					<td>보정본</td>
+					<td>1컷</td>
+					<td>1컷</td>
+					<td>1concept 2컷</td>
+				</tr>
+				<tr>
+					<td>매수</td>
+					<td>15cm x 10cm 1매<br>5cm x 7cm 2매<br>3.5cm x 4.5cm 8매</td>
+					<td>3.5cm x 4.5cm 6매</td>
+					<td>4inch x 6inch 1컷당 1매<br>총 2매</td>
+				</tr>
+				<tr>
+					<td>촬영시간</td>
+					<td>60분</td>
+					<td>60분</td>
+					<td>1concept 당 60분</td>
+				</tr>
+				<tr>
+					<td>예약금</td>
+					<td>30,000원</td>
+					<td>20,000원</td>
+					<td>50,000원</td>
+				</tr>
+				<tr>
+					<td>금액</td>
+					<td>50,000원</td>
+					<td>30,000원</td>
+					<td>150,000원</td>
+				</tr>
+				<tr>
+					<td colspan="4" align="center">*의상 별도 준비</td>
+				</tr>
+				</table>
+				<div class="txtBoxWrap clearfix">
+				<div class="txtBoxOne">
+					<h6>예약시 주의사항</h6>
+					<p>CINEST STUDIO는 100% 예약제로 운영하고 있습니다.<br>
+					상품별 예약금 입금 시 예약이 확정 됩니다. 예약 후 1시간 동안 미 입금시 <br>
+					자동 취소됩니다. 자세한 내용은 홈페이지를 참고해주시기 바랍니다.</p>
+				</div>
+				<div class="gapLine"></div>
+				<div class="txtBoxTwo">
+					<h6>원본사진 관련 안내</h6>
+					<p>촬영시 CINEST 디렉터가 고객님이 제일 아름다운 순간을 촬영하여<br> 1:1 정밀 리터칭작업을 진행하므로 CINEST SIGNATURE 사진의 가치를 보존하고<br>2차수정 및 재배포의행위를 금지하기 위해 추가금을 주시더라도 원본사진은 제공되지 않습니다.<br>1:1 정밀 리터칭과정을 통해 시간이 조금 더 걸리더라도 만족하시는 사진을 선물해드립니다.</p>
+				</div>
+				<div class="button">
+					<a href="#">Reservation</a>
+				</div>
+			</div>
+			<img src="images/personalLine.jpg" alt="">
+			</div>
+			<div class="box2 bView clearfix">
+				<h2>CINEST Special Line<br>
+				<span>CINEST는 인간의 아름다운 CINEMATIC LIFE를 지향합니다.</span></h2>
+				<table>
+				<tr>
+					<th>상품이름</th>
+					<th>우정사진</th>
+					<th>그룹사진 (3인이상)</th>
+					<th>반려동물 사진</th>
+				</tr>
+				<tr>
+					<td>배경</td>
+					<td colspan="4" align="center">4가지 signature color중 1 color</td>
+				</tr>
+				<tr>
+					<td>보정본</td>
+					<td>2컷</td>
+					<td>2컷</td>
+					<td>2컷</td>
+				</tr>
+				<tr>
+					<td>매수</td>
+					<td>4inch x 6inch<br>1인당 2매, 총 4매매</td>
+					<td>4inch x 6inch<br>1인당 1매</td>
+					<td>4inch x 6inch 2매<p style="font-size:0.8em;">반려동물과 함께 1매, 반려동물 독사진 1매)</p></td>
+				</tr>
+				<tr>
+					<td>촬영시간</td>
+					<td colspan="4" align="center">60분</td>
+				</tr>
+				<tr>
+					<td>예약금</td>
+					<td>35,000원</td>
+					<td>인당 20,000원</td>
+					<td>40,000원</td>
+				</tr>
+				<tr>
+					<td>금액</td>
+					<td>2인 기준 70,000원</td>
+					<td>인당 40,000원</td>
+					<td>80,000원<p style="font-size:0.8em;">(2마리 이상 일 경우, 독사진을 그룹샷으로 진행)</p></td>
+				</tr>
+				<tr>
+					<td colspan="4" align="center">*의상 별도 준비</td>
+				</tr>
+				</table>
+				<div class="txtBoxWrap clearfix">
+				<div class="txtBoxOne">
+					<h6>예약시 주의사항</h6>
+					<p>CINEST STUDIO는 100% 예약제로 운영하고 있습니다.<br>
+					상품별 예약금 입금 시 예약이 확정 됩니다. 예약 후 1시간 동안 미 입금시 <br>
+					자동 취소됩니다. 자세한 내용은 홈페이지를 참고해주시기 바랍니다.</p>
+				</div>
+				<div class="gapLine"></div>
+				<div class="txtBoxTwo">
+					<h6>원본사진 관련 안내</h6>
+					<p>촬영시 CINEST 디렉터가 고객님이 제일 아름다운 순간을 촬영하여<br> 1:1 정밀 리터칭작업을 진행하므로 CINEST SIGNATURE 사진의 가치를 보존하고<br>2차수정 및 재배포의행위를 금지하기 위해 추가금을 주시더라도 원본사진은 제공되지 않습니다.<br>1:1 정밀 리터칭과정을 통해 시간이 조금 더 걸리더라도 만족하시는 사진을 선물해드립니다.</p>
+				</div>
+				<div class="button">
+					<a href="#">Reservation</a>
+				</div>
+			</div>
+			<img src="images/friendlyLine.jpg" alt="">
+			</div>
+			<div class="box3 bView clearfix">
+				<h2>CINEST Lovely Line<br>
+				<span>CINEST는 인간의 아름다운 CINEMATIC LIFE를 지향합니다.</span></h2>
+				<table>
+				<tr>
+					<th>상품이름</th>
+					<th>CINEST 커플사진</th>
+					<th>CINEST 커플사진 PREMIUM</th>
+					<th>CINEST 가족사진</th>
+				</tr>
+				<tr>
+					<td>배경</td>
+					<td>4가지 signature color중 1 color</td>
+					<td colspan="2">4가지 signature color중<br>2 color, 2 wardrobe</td>
+				</tr>
+				<tr>
+					<td>보정본</td>
+					<td>2컷</td>
+					<td>4컷</td>
+					<td>2컷</td>
+				</tr>
+				<tr>
+					<td>매수</td>
+					<td>5inch x 7inch 1컷당 2매, 총 4매</td>
+					<td>5inch x 7inch 1컷당 2매, 총 8매<br>CINEST 액자포함<br>(297mm x 420mm 1매)</td>
+					<td>5inch x 7inch 1컷당 2매 총 4매<br>CINEST 액자포함<br>(297mm x 420mm 1매)</td>
+				</tr>
+				<tr>
+					<td>촬영시간</td>
+					<td colspan="4" align="center">60분</td>
+				</tr>
+				<tr>
+					<td>예약금</td>
+					<td>70,000원</td>
+					<td>170,000원</td>
+					<td>200,000원</td>
+				</tr>
+				<tr>
+					<td>금액</td>
+					<td>150,000원</td>
+					<td>350,000원</td>
+					<td>4인 가족 기준 400,000원<p style="font-size:0.8em;">인원 추가시 인당 50,000원 (최대 6인)</p></td>
+				</tr>
+				<tr>
+					<td colspan="4" align="center">*의상 별도 준비</td>
+				</tr>
+				</table>
+				<div class="txtBoxWrap clearfix">
+				<div class="txtBoxOne">
+					<h6>예약시 주의사항</h6>
+					<p>CINEST STUDIO는 100% 예약제로 운영하고 있습니다.<br>
+					상품별 예약금 입금 시 예약이 확정 됩니다. 예약 후 1시간 동안 미 입금시 <br>
+					자동 취소됩니다. 자세한 내용은 홈페이지를 참고해주시기 바랍니다.</p>
+				</div>
+				<div class="gapLine"></div>
+				<div class="txtBoxTwo">
+					<h6>원본사진 관련 안내</h6>
+					<p>촬영시 CINEST 디렉터가 고객님이 제일 아름다운 순간을 촬영하여<br> 1:1 정밀 리터칭작업을 진행하므로 CINEST SIGNATURE 사진의 가치를 보존하고<br>2차수정 및 재배포의행위를 금지하기 위해 추가금을 주시더라도 원본사진은 제공되지 않습니다.<br>1:1 정밀 리터칭과정을 통해 시간이 조금 더 걸리더라도 만족하시는 사진을 선물해드립니다.</p>
+				</div>
+				<div class="button">
+					<a href="#">Reservation</a>
+				</div>
+			</div>
+			<img src="images/lovelyLine.jpg" alt="">
+			</div>
+			<div class="box4 bView clearfix">
+				<h2>CINEST Special Line<br>
+				<span>CINEST는 인간의 아름다운 CINEMATIC LIFE를 지향합니다.</span></h2>
+				<table>
+				<tr>
+					<th>상품이름</th>
+					<th>PARENTS REMIND WEDDING</th>
+					<th>CINEST SEMI WEDDING</th>
+					<th>CINEST SEMI WEDDING PREMIUM</th>
+				</tr>
+				<tr>
+					<td>배경</td>
+					<td colspan="2">4가지 signature color중<br>2 color, 2 wardrobe</td>
+					<td>4가지 signature color중<br>3 color, 3 wardrobe</td>
+				</tr>
+				<tr>
+					<td>보정본</td>
+					<td>2컷</td>
+					<td>4컷</td>
+					<td>6컷</td>
+				</tr>
+				<tr>
+					<td>매수</td>
+					<td>5inch x 7inch 1컷당 1매, 총 2매<br>CINEST 액자포함<br>(297mm x 420mm) 1매</td>
+					<td>5inch x 7inch 1컷당 1매, 총 4매<br>CINEST 액자포함<br>(297mm x 420mm) 1매</td>
+					<td>5inch x 7inch 1컷당 1매, 총 6매<br>CINEST 액자포함<br>(297mm x 420mm) 2매</td>
+				</tr>
+				<tr>
+					<td>촬영시간</td>
+					<td colspan="2" align="center">60분</td>
+					<td>120분</td>
+				</tr>
+				<tr>
+					<td>예약금</td>
+					<td>120,000원</td>
+					<td>200,000원</td>
+					<td>300,000원</td>
+				</tr>
+				<tr>
+					<td>금액</td>
+					<td>250,000원</td>
+					<td>400,000원</td>
+					<td>600,000원</td>
+				</tr>
+				<tr>
+					<td colspan="4" align="center">*의상 별도 준비</td>
+				</tr>
+				</table>
+				<div class="txtBoxWrap clearfix">
+				<div class="txtBoxOne">
+					<h6>예약시 주의사항</h6>
+					<p>CINEST STUDIO는 100% 예약제로 운영하고 있습니다.<br>
+					상품별 예약금 입금 시 예약이 확정 됩니다. 예약 후 1시간 동안 미 입금시 <br>
+					자동 취소됩니다. 자세한 내용은 홈페이지를 참고해주시기 바랍니다.</p>
+				</div>
+				<div class="gapLine"></div>
+				<div class="txtBoxTwo">
+					<h6>원본사진 관련 안내</h6>
+					<p>촬영시 CINEST 디렉터가 고객님이 제일 아름다운 순간을 촬영하여<br> 1:1 정밀 리터칭작업을 진행하므로 CINEST SIGNATURE 사진의 가치를 보존하고<br>2차수정 및 재배포의행위를 금지하기 위해 추가금을 주시더라도 원본사진은 제공되지 않습니다.<br>1:1 정밀 리터칭과정을 통해 시간이 조금 더 걸리더라도 만족하시는 사진을 선물해드립니다.</p>
+				</div>
+				<div class="button">
+					<a href="#">Reservation</a>
+				</div>
+			</div>
+			<img src="images/specialLine.jpg" alt="">
+			</div>
 		</section>
 	</main>
 </body>
