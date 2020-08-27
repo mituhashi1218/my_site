@@ -12,41 +12,12 @@
 	<script>
 		$(document).ready(function(){
 			$(".box2,.box3,.box4,.box5").hide();
-			$(".conMenuThree>ul>li").eq(0).click(function(){
-				$(".box1").show();
-				$(".box2").hide();
-				$(".box3").hide();
-				$(".box4").hide();
-				$(".box5").hide();
-			})
-			$(".conMenuThree>ul>li").eq(1).click(function(){
-				$(".box1").hide();
-				$(".box2").show();
-				$(".box3").hide();
-				$(".box4").hide();
-				$(".box5").hide();
-			})
-			$(".conMenuThree>ul>li").eq(2).click(function(){
-				$(".box1").hide();
-				$(".box2").hide();
-				$(".box3").show();
-				$(".box4").hide();
-				$(".box5").hide();
-			})
-			$(".conMenuThree>ul>li").eq(3).click(function(){
-				$(".box1").hide();
-				$(".box2").hide();
-				$(".box3").hide();
-				$(".box4").show();
-				$(".box5").hide();
-			})
-			$(".conMenuThree>ul>li").eq(4).click(function(){
-				$(".box1").hide();
-				$(".box2").hide();
-				$(".box3").hide();
-				$(".box4").hide();
-				$(".box5").show();
-			})
+			$(".tab>ul>li").click(function(){
+				var i = $(this).index();
+				console.log(i)
+				$(".tab .bView").hide().eq(i).show();
+				$(".tab>ul>li").removeClass("active").eq(i).addClass("active");
+			});
 		})
 	</script>
 </head>
@@ -88,13 +59,13 @@
 			</li>
 			<li class="up tmenu">
 				<h2><a href="./theater.html">영화관</a></h2>
-				<a href="./reserved.html" class="first">박스오피스</a><br>
-				<a href="./reserved.html" class="first">상영예정작</a><br>
-				<a href="./reserved.html" class="first">필름 소사이어티</a><br>
-				<a href="./reserved.html" class="first">클래식 소사이어티</a>
+				<a href="./theater.html" class="first">박스오피스</a><br>
+				<a href="./theater.html" class="first">상영예정작</a><br>
+				<a href="./theater.html" class="first">필름 소사이어티</a><br>
+				<a href="./theater.html" class="first">클래식 소사이어티</a>
 			</li>
 			<li class="up tmenu">
-				<h2><a href="./event.html">예매</a></h2>
+				<h2><a href="./reserved.html">예매</a></h2>
 				<a href="./reserved.html" class="first">빠른예매</a><br>
 				<a href="./reserved.html" class="first">상영시간표</a><br>
 				<a href="./reserved.html" class="first">더 부티크 프라이빗 예매</a>
@@ -151,39 +122,39 @@
 	});
 </script>
 </header>
-<div class="conMenuThree">
+<div class="conMenuThree tab">
 	<ul class="clearfix">
-		<li>전체</li>
+		<li class="active">전체</li>
 		<li>시네Pick</li>
 		<li>영화</li>
 		<li>극장</li>
 		<li>시사회/무대인사</li>
 	</ul>
-	<div class="box1 event">
+	<div class="box1 event bView">
 		<br>
 		<a href="./index.html">HOME</a> > <a href="#">이벤트</a>
 		<h2>전체</h2>
 		<img src="images/eventone.jpg" alt="">
 	</div>
-	<div class="box2 event">		
+	<div class="box2 event bView">		
 		<br>
 		<a href="./index.html">HOME</a> > <a href="#">이벤트</a>
 		<h2>시네Pick</h2>
 		<img src="images/eventtwo.jpg" alt="">
 	</div>
-	<div class="box3 event">
+	<div class="box3 event bView">
 		<br>
 		<a href="./index.html">HOME</a> > <a href="#">이벤트</a>
 		<h2>영화</h2>
 		<img src="images/eventthree.jpg" alt="">
 	</div>
-	<div class="box4 event">
+	<div class="box4 event bView">
 		<br>
 		<a href="./index.html">HOME</a> > <a href="#">이벤트</a>
 		<h2>극장</h2>
 		<img src="images/eventfour.jpg" alt="">
 	</div>
-	<div class="box5 event">
+	<div class="box5 event bView">
 		<br>
 		<a href="./index.html">HOME</a> > <a href="#">이벤트</a>
 		<h2>시사회/무대인사</h2>

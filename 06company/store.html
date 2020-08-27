@@ -12,22 +12,13 @@
 	<script src="js/jquery.bxslider.js"></script>
 	<script>
 		$(document).ready(function(){
-			$(".box2,.box3").hide();
-			$(".conMenuFive>ul>li").eq(0).click(function(){
-				$(".box1").show();
-				$(".box2").hide();
-				$(".box3").hide();
-			})
-			$(".conMenuFive>ul>li").eq(1).click(function(){
-				$(".box1").hide();
-				$(".box2").show();
-				$(".box3").hide();
-			})
-			$(".conMenuFive>ul>li").eq(2).click(function(){
-				$(".box1").hide();
-				$(".box2").hide();
-				$(".box3").show();
-			})
+			$(".box2,.box3,.box4").hide();
+			$(".tab>ul>li").click(function(){
+				var i = $(this).index();
+				console.log(i)
+				$(".tab .bView").hide().eq(i).show();
+				$(".tab>ul>li").removeClass("active").eq(i).addClass("active");
+			});
 		})
 	</script>
 	<script>
@@ -147,25 +138,25 @@
 	});
 </script>
 </header>
-<div class="conMenuFive">
+<div class="conMenuFive tab">
 	<ul class="clearfix">
-		<li>새로운 상품</li>
+		<li class="active">새로운 상품</li>
 		<li>메가 티켓</li>
 		<li>팝콘/음료/굿즈</li>
 	</ul>
-	<div class="box1 store">
+	<div class="box1 store bView">
 		<br>
 		<a href="./index.html">HOME</a> > <a href="#">스토어</a>
 		<h2>새로운 상품</h2>
 		<img src="images/storeone.jpg" alt="">
 	</div>
-	<div class="box2 store">		
+	<div class="box2 store bView">		
 		<br>
 		<a href="./index.html">HOME</a> > <a href="#">스토어</a>
 		<h2>메가 티켓</h2>
 		<img src="images/storetwo.jpg" alt="">
 	</div>
-	<div class="box3 store">		
+	<div class="box3 store bView">		
 		<br>
 		<a href="./index.html">HOME</a> > <a href="#">스토어</a>
 		<h2>팝콘/음료/굿즈</h2>

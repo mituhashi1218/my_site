@@ -12,15 +12,13 @@
 	<script src="js/jquery.bxslider.js"></script>
 	<script>
 		$(document).ready(function(){
-			$(".box2").hide();
-			$(".conMenuFour>ul>li").eq(0).click(function(){
-				$(".box1").show();
-				$(".box2").hide();
-			})
-			$(".conMenuFour>ul>li").eq(1).click(function(){
-				$(".box1").hide();
-				$(".box2").show();
-			})
+			$(".box2,.box3,.box4").hide();
+			$(".tab>ul>li").click(function(){
+				var i = $(this).index();
+				console.log(i)
+				$(".tab .bView").hide().eq(i).show();
+				$(".tab>ul>li").removeClass("active").eq(i).addClass("active");
+			});
 		})
 	</script>
 </head>
@@ -128,18 +126,18 @@
 	});
 </script>
 </header>
-<div class="conMenuFour">
+<div class="conMenuFour tab">
 	<ul class="clearfix">
-		<li>멤버십 안내</li>
+		<li class="active">멤버십 안내</li>
 		<li>VIP LOUNGE</li>
 	</ul>
-	<div class="box1 member">
+	<div class="box1 member bView">
 		<br>
 		<a href="./index.html">HOME</a> > <a href="#">혜택</a>
 		<h2>멤버십 안내</h2>
 		<img src="images/memberone.jpg" alt="">
 	</div>
-	<div class="box2 member">		
+	<div class="box2 member bView">		
 		<br>
 		<a href="./index.html">HOME</a> > <a href="#">혜택</a>
 		<h2>VIP LOUNGE</h2>

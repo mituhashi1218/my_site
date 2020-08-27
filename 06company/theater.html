@@ -12,32 +12,39 @@
 	<script src="js/jquery.bxslider.js"></script>
 	<script>
 		$(document).ready(function(){
+			// $(".box2,.box3,.box4").hide();
+			// $(".conMenu>ul>li").eq(0).click(function(){
+			// 	$(".box1").show();
+			// 	$(".box2").hide();
+			// 	$(".box3").hide();
+			// 	$(".box4").hide();
+			// })
+			// $(".conMenu>ul>li").eq(1).click(function(){
+			// 	$(".box1").hide();
+			// 	$(".box2").show();
+			// 	$(".box3").hide();
+			// 	$(".box4").hide();
+			// })
+			// $(".conMenu>ul>li").eq(2).click(function(){
+			// 	$(".box1").hide();
+			// 	$(".box2").hide();
+			// 	$(".box3").show();
+			// 	$(".box4").hide();
+			// })
+			// $(".conMenu>ul>li").eq(3).click(function(){
+			// 	$(".box1").hide();
+			// 	$(".box2").hide();
+			// 	$(".box3").hide();
+			// 	$(".box4").show();
+			// })
 			$(".box2,.box3,.box4").hide();
-			$(".conMenu>ul>li").eq(0).click(function(){
-				$(".box1").show();
-				$(".box2").hide();
-				$(".box3").hide();
-				$(".box4").hide();
-			})
-			$(".conMenu>ul>li").eq(1).click(function(){
-				$(".box1").hide();
-				$(".box2").show();
-				$(".box3").hide();
-				$(".box4").hide();
-			})
-			$(".conMenu>ul>li").eq(2).click(function(){
-				$(".box1").hide();
-				$(".box2").hide();
-				$(".box3").show();
-				$(".box4").hide();
-			})
-			$(".conMenu>ul>li").eq(3).click(function(){
-				$(".box1").hide();
-				$(".box2").hide();
-				$(".box3").hide();
-				$(".box4").show();
-			})
-		})
+			$(".tab>ul>li").click(function(){
+				var i = $(this).index();
+				console.log(i)
+				$(".tab .bView").hide().eq(i).show();
+				$(".tab>ul>li").removeClass("active").eq(i).addClass("active");
+			});
+		});
 	</script>
 </head>
 <body>
@@ -142,32 +149,32 @@
 	});
 </script>
 </header>
-<div class="conMenu">
+<div class="conMenu tab">
 	<ul class="clearfix">
-		<li>박스오피스</li>
+		<li class="active">박스오피스</li>
 		<li>상영예정작</li>
 		<li>필름소사이어티</li>
 		<li>클래식 소사이어티</li>
 	</ul>
-	<div class="box1 home">
+	<div class="box1 home bView">
 		<br>
 		<a href="./index.html">HOME</a> > <a href="#">상영작</a>
 		<h2>박스오피스</h2>
 		<img src="images/subtwo.png" alt="">
 	</div>
-	<div class="box2 home">		
+	<div class="box2 home bView">		
 		<br>
 		<a href="./index.html">HOME</a> > <a href="#">상영작</a>
 		<h2>상영예정작</h2>
 		<img src="images/subone.png" alt="">
 	</div>
-	<div class="box3 home">
+	<div class="box3 home bView">
 		<br>
 		<a href="./index.html">HOME</a> > <a href="#">상영작</a>
 		<h2>필름소사이어티</h2>
 		<img src="images/subthree.png" alt="">
 	</div>
-	<div class="box4 home">
+	<div class="box4 home bView">
 		<br>
 		<a href="./index.html">HOME</a> > <a href="#">상영작</a>
 		<h2>클래식 소사이어티</h2>

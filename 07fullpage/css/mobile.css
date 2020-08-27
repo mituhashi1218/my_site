@@ -14,6 +14,11 @@
 		from{opacity: 0;};
 		to{opacity: 1;}
 	}
+	section.active{animation-name:pageAni;animation-duration:2s;opacity: 1;background:#fff;}
+	@keyframes pageAni{
+		from{opacity: 0;};
+		to{opacity: 1;}
+	}
 
 	/*page1*/
 	section#page1 img{position: absolute;top:50%;left: 50%;transform:translate(-50%,-50%);z-index:1;animation-name:mainlogo;animation-duration:2.5s;animation-delay:20s;
@@ -54,7 +59,7 @@
 	section#page2 .box2{width: 80%;height: 80%;margin:20px auto;animation-name:boxTwo;animation-duration:1.5s;opacity: 1;position: relative;}
 	section#page2 .box2 iframe{top:10%;left: 50%;width: 70%;height:30%;
 		transform:translateX(-50%);position: absolute;box-shadow:0 0 5px 0}
-	section#page2 .box2 li{text-align: center;color:#000;margin-top:250px;height: 100px;}
+	section#page2 .box2 li{text-align: center;color:#000;margin-top:300px;height: 100px;}
 	section#page2 .box2 li p{font-size:0.8em;font-weight: lighter;}
 	@keyframes boxTwo{
 		from{opacity: 0;};

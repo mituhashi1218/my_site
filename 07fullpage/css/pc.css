@@ -14,6 +14,11 @@
 		from{opacity: 0;};
 		to{opacity: 1;}
 	}
+	section.active{animation-name:pageAni;animation-duration:2s;opacity: 1;background:#fff;}
+	@keyframes pageAni{
+		from{opacity: 0;};
+		to{opacity: 1;}
+	}
 
 	/*page1*/
 	section#page1 img{position: absolute;top:50%;left: 50%;transform:translate(-50%,-50%);z-index:1;animation-name:mainlogo;animation-duration:2.5s;animation-delay:20s;
@@ -156,6 +161,10 @@
 	align-items:center;padding: 70px 20px;cursor: pointer;}
 	.slick-prev{left: 13%;color:#f37101}
 	.slick-next{right: 15%;color:#f37101}
+	.slick-prev::before {
+    content: "←";display:none}
+    .slick-next:before {
+    content: '→';display:none}
 
 	/*togglemenu*/
 	.toggleMenu{width: 50px;height: 50px;position: fixed;
