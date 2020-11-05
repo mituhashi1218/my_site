@@ -46,7 +46,7 @@ header .bx-wrapper .bx-pager.bx-default-pager a:hover, header .bx-wrapper .bx-pa
     background: #fff;}
 .toggleMenu,.view{display: none}
 
-.header .contents{width:1200px;height:500px;bottom:157px;position: absolute;}
+.header .contents{width:1200px;height:500px;bottom:151px;position: absolute;}
 .header .contents ul{width: 100%;margin:0 auto;}
 .header .contents div{float: left;width:25%;height:250px;}
 .header .contents div:first-child{background:rgba(78,78,78,0.9)}
