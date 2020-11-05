@@ -6,7 +6,7 @@ header.main .slider{width: 100%;}
 header.main .slider_txt{width:100%;position: absolute;left: 50%;transform: translateX(-50%);
 top: 30%;color:#fff;text-align: center;}
 header.main h3{font-size:1.5em;}
-header.main h3:after{content:"";display: block;width: 200px;height: 2px;background: #fff;margin:0 auto;}
+header.main h3:after{content:"";display: block;width: 200px;height: 2px;background: #fff;margin:5px auto;}
 header.main .slider_txt p{padding-top: 20px;font-size:0.7em;}
 
 header .toggleMenu{
@@ -101,11 +101,11 @@ background-color:rgba(0,0,0,0.8);transition:0.4s;transform:scale(0);}
 /*conTwo*/
 
 .conTwowrap{width: 100%;background: #e9e9e9;height: 400px;}
-.conTwo{width:460px;padding-top:30px;margin:0 auto;}
-.conTwo .txt{max-width:483px;border-top: 1px solid #29292b;border-bottom: 1px solid #29292b;text-align: center;line-height: 50px;
+.conTwo{width:483px;padding-top:30px;margin:0 auto;}
+.conTwo .txt{border-top: 1px solid #29292b;border-bottom: 1px solid #29292b;text-align: center;line-height: 50px;
 color:#29292b;}
 /*.conTwo ul{padding-top: 60px;}*/
-.conTwo ul li{width:40%;height:150px;float: left;margin-right:70px;
+.conTwo ul li{width:40%;height:150px;float: left;margin-right:60px;
   position: relative;transform:scale(0.3);}
 .conTwo ul li:last-child{margin-right: 0;}
 .conTwo ul li a{transition:0.5s}
@@ -115,7 +115,7 @@ transform:translate(-50%,-50%);transition:0.3s}
 
 /*conThree*/
 .conThreewrap{background: #513397;height: 450px;}
-.conThree{width:100%;margin:0 auto;padding-top: 60px;}
+.conThree{width:483px;margin:0 auto;padding-top: 60px;}
 .conThree .txt{border-top: 1px solid #e9e9e9;border-bottom: 1px solid #e9e9e9;text-align: center;line-height: 50px;
 color:#e9e9e9;}
 .conThree ul{padding-top: 60px;}
@@ -157,7 +157,7 @@ footer .sns li:last-child{margin-right: 0;}
   .top{position:fixed;bottom:25%;right: 10%;
     width: 40px;height: 40px;border-radius:25px;background: #ec7c0c;
     text-align: center;animation:viewTop 1s infinite alternate;opacity:0;transition:0.3s}
- .top a{color:#e9e9e9;line-height: 38px;font-size:12px;}
+ .top a{color:#e9e9e9;line-height: 40px;font-size:12px;}
   @keyframes viewTop{
     from{transform:translateY(0);}
     to{transform:translateY(-20px);}
