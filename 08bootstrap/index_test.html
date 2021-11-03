@@ -39,7 +39,7 @@
       tr{border-top: 1px solid #000;}
       tr:last-child td{border:none;} 
       #prevention h2,#prevention h5,#prevention p{color:#5c6a81;}
-      div.line{width: 150px;height: 9px;background:#5c6a81;border-radius:30px;margin-bottom:30px;}
+      div.line{width: 150px;height: 15px;background:#5c6a81;border-radius:30px;margin-bottom:30px;}
       .prevention .line{margin:0 auto;}
 </style>
 <body>
@@ -82,9 +82,9 @@
     <!-- section 1 -->
   <section id="hero">
     <div class="container d-flex h-100 mt-sm-5">
-      <div class="row d-flex justify-content-sm-center align-self-center lg-mt-5" data-aos="fade-up">
+      <div class="row d-flex justify-content-sm-center align-self-center mt-5" data-aos="fade-up">
         <div class="col-md-6 intro-info order-last order-md-first text-center text-md-left px-5 px-md-0" data-aos="zoom-in" data-aos-delay="100">
-          <img src="assets/img/stayhome01.png" alt="" class="img-fluid d-block d-sm-none">
+          <img src="assets/img/stayhome01.png" alt="" class="img-fluid d-block d-sm-none col-sm-6">
           <h2>#Stay Home</h2>
           <h3><span>사랑하는 사람을</span> 지켜주세요.</h3>
           <a href="#prevention" class="btn btn-info d-block d-md-inline">더 보기</a>
@@ -129,7 +129,7 @@
             <h2 style="font-size:1.6em;">코로나바이러스(Coronavirus; CoV)</h2>
             <h3 style="font-size:1.3em;">사람을 포함한 동물에 광범위한 호흡계 및 소화계 감염을 일으키는 RNA 바이러스</h3>
             <table class="col-sm-12 text-left" style="font-size:0.9em;">
-              <tr>1234qe1234
+              <tr>
                 <td class="text-center" style="width:100px;"><strong>외국어 표기</strong></td>
                 <td class="pl-4">corona virus disease 19,<br>COVID-19(영어)</td>
               </tr>
@@ -171,10 +171,6 @@
       </div>
     </div>
   </section>
-  <style>
-    #symptoms .container img:hover{transform:scale(1.1);opacity:1;}
-    #symptoms .container img{transition:0.5s;opacity:0.8;}
-  </style>
   <section id="symptoms" class="">
     <div class="container mb-5" data-aos="fade-up">  
       <div class="row">
@@ -183,13 +179,13 @@
         </div>
         <div class="col-md-12 d-flex wow bounceInUp">
           <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
-            <img src="assets/img/symptoms01.jpg" alt="" class="img-fluid">
+            <img src="assets/img/symptoms01.jpg" alt="">
           </div>
           <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
-            <img src="assets/img/symptoms02.jpg" alt="" class="img-fluid">
+            <img src="assets/img/symptoms02.jpg" alt="">
           </div>
           <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
-            <img src="assets/img/symptoms03.jpg" alt="" class="img-fluid">
+            <img src="assets/img/symptoms03.jpg" alt="">
           </div>
         </div>
       </div>
@@ -199,11 +195,11 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 d-flex">
-          <div class="col-lg-9 col-12" data-aos="fade-right">
-            <h2 class="">COVID - 19</h5>
+          <div class="col-md-9" data-aos="fade-right">
+            <h2>COVID - 19</h5>
             <p>국내 감염자 추가 발생에 대비하고, 지역사회 확산을 예방하기 위해서 국민 여러분의 동참이 필요합니다.<br>의심증상 발생 시 관할보건소,1339콜센터,지역번호+120콜센터 상담 후 선별진료소 방문<br>(방문시 가급적 자차이용)</p>
           </div>
-          <div class="col-lg-3 col-12 cta-btn-container text-center" data-aos="fade-left">
+          <div class="col-md-3 cta-btn-container text-center" data-aos="fade-left">
             <a href="#" class="cta-btn align-middle">자세히보기</a>
           </div>
         </div>
@@ -235,76 +231,72 @@ chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
 
 chart.data = [
   {
-    country: "대구",
-    visits: 7112
-  },
-  {
     country: "서울",
-    visits: 4743
+    visits: 102204
   },
   {
     country: "경기",
-    visits: 3972
-  },
-  {
-    country: "경북",
-    visits: 1489
-  },
-  {
-    country: "해외유입",
-    visits: 1428
+    visits: 91713
   },
   {
     country: "인천",
-    visits: 843
+    visits: 16077
   },
   {
-    country: "광주",
-    visits: 482
-  },
-  {
-    country: "충남",
-    visits: 445
+    country: "대구",
+    visits: 15664
   },
   {
     country: "부산",
-    visits: 361
-  },
-  {
-    country: "대전",
-    visits: 345
+    visits: 12809
   },
   {
     country: "경남",
-    visits: 271
+    visits: 11637
+  },
+  {
+    country: "충남",
+    visits: 9244
+  },
+  {
+    country: "경북",
+    visits: 8439
+  },
+  {
+    country: "대전",
+    visits: 7058
   },
   {
     country: "강원",
-    visits: 217
-  },
-  {
-    country: "전남",
-    visits: 166
+    visits: 6522
   },
   {
     country: "충북",
-    visits: 149
+    visits: 6443
+  },
+  {
+    country: "검역",
+    visits: 6105
   },
   {
     country: "울산",
-    visits: 141
+    visits: 5208
   },
   {
     country: "전북",
-    visits: 101
+    visits: 4570
   },
   {
-    country: "세종",
-    visits: 70
+    country: "전남",
+    visits: 3135
   },
   {
     country: "제주",
-    visits: 56
+    visits: 2892
+  },
+  {
+    country: "세종",
+    visits: 1258
   },
 ];
 
@@ -316,18 +308,18 @@ categoryAxis.fontSize = 11;
 
 var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
 valueAxis.min = 0;
-valueAxis.max = 10000;
+valueAxis.max = 150000;
 valueAxis.strictMinMax = true;
 valueAxis.renderer.minGridDistance = 30;
 // axis break
 var axisBreak = valueAxis.axisBreaks.create();
-axisBreak.startValue =5000;
-axisBreak.endValue =10000;
+axisBreak.startValue =80000;
+axisBreak.endValue =150000;
 axisBreak.breakSize = 0.005;
 
 // fixed axis break
 var d = (axisBreak.endValue - axisBreak.startValue) / (valueAxis.max - valueAxis.min);
-axisBreak.breakSize = 0.05 * (1 - d) / d; 
+axisBreak.breakSize = 0.05 * (1 - d) / d; // 0.05 means that the break will take 5% of the total value axis height
 
 // make break expand on hover
 var hoverState = axisBreak.states.create("hover");
@@ -336,6 +328,22 @@ hoverState.properties.opacity = 0.1;
 hoverState.transitionDuration = 1500;
 
 axisBreak.defaultState.transitionDuration = 1000;
+/*
+// this is exactly the same, but with events
+axisBreak.events.on("over", function() {
+  axisBreak.animate(
+    [{ property: "breakSize", to: 1 }, { property: "opacity", to: 0.1 }],
+    1500,
+    am4core.ease.sinOut
+  );
+});
+axisBreak.events.on("out", function() {
+  axisBreak.animate(
+    [{ property: "breakSize", to: 0.005 }, { property: "opacity", to: 1 }],
+    1000,
+    am4core.ease.quadOut
+  );
+});*/
 
 var series = chart.series.push(new am4charts.ColumnSeries());
 series.dataFields.categoryX = "country";
@@ -344,65 +352,69 @@ series.columns.template.tooltipText = "{valueY.value}";
 series.columns.template.tooltipY = 0;
 series.columns.template.strokeOpacity = 0;
 
+// as by default columns of the same series are of the same color, we add adapter which takes colors from chart.colors color set
 series.columns.template.adapter.add("fill", function(fill, target) {
   return chart.colors.getIndex(target.dataItem.index);
 });
 
-});
+}); // end am4core.ready()
+ // chart
 </script>
   <section class="situation">
     <div class="container">
       <div class="row">
         <div class="col-md-12 text-center mt-5" id="situation" data-aos="fade-down">
           <h2>Situation</h2>
+       <!-- 확진자 -->   
           <div class="col-md-12 mt-5 text-left" data-aos="fade-right" data-aos-delay="300">
             <h5>전 세계</h5>
           </div>
-          <div class="row col-md-12 d-flex counters mb-5" data-aos="fade-right" data-aos-delay="300">
+          <div class="col-md-12 d-flex counters mb-5" data-aos="fade-right" data-aos-delay="300">
               <div class="col-lg-3 col-6 text-center">
                 <p>누적 확진환자</p>
-                <span data-toggle="counter-up">41,145,782</span>
+                <span data-toggle="counter-up">235,137,710</span>
               </div>
               <div class="col-lg-3 col-6 text-center checking">
-                <p>격리해제</p>
-                <span data-toggle="counter-up">21,267,819</span>
+                <p>발생국</p>
+                <span data-toggle="counter-up">222</span>
               </div>
 
               <div class="col-lg-3 col-6 text-center">
                 <p>치명률(%)</p>
-                <span data-toggle="counter-up">3.19</span>
+                <span data-toggle="counter-up">2.04</span>
               </div>
 
               <div class="col-lg-3 col-6 text-center dead">
                 <p>사망자</p>
-                <span data-toggle="counter-up">1,121,843</span>
+                <span data-toggle="counter-up">4,807,275</span>
               </div>
             </div>
           <h5 class="col-md-12 text-left" data-aos="fade-left" data-aos-delay="300">대한민국</h5>
-          <div class="row col-md-12 d-flex counters mb-5" data-aos="fade-left" data-aos-delay="300">
+          <div class="col-md-12 d-flex counters mb-5" data-aos="fade-left" data-aos-delay="300">
               <div class="col-lg-3 col-6 text-center">
                 <p>누적 확진환자</p>
-                <span data-toggle="counter-up">25,543</span>
+                <span data-toggle="counter-up">316,020</span>
               </div>
               <div class="col-lg-3 col-6 text-center checking">
                 <p>격리해제</p>
-                <span data-toggle="counter-up">19,813</span>
+                <span data-toggle="counter-up">277,092</span>
               </div>
-
               <div class="col-lg-3 col-6 text-center">
-                <p>검사 중</p>
-                <span data-toggle="counter-up">23,647</span>
+                <p>검사진행</p>
+                <span data-toggle="counter-up">1,179,529</span>
               </div>
-
               <div class="col-lg-3 col-6 text-center dead">
                 <p>사망자</p>
-                <span data-toggle="counter-up">453</span>
+                <span data-toggle="counter-up">2,504</span>
               </div>
             </div>
           </div>
+
+    <!-- 차트 -->      
         <div class="col-md-12 mb-5 text-left" data-aos="fade-up" data-aos-delay="300">
           <h5 class="mb-5">지역별 확진자</h5>
           <div id="chartdiv"></div>
+          <p class="text-right">(※본 차트는 2021년 10월 2일 기준으로 작성되었습니다.)</p>
         </div>
     </div>
   </section>
@@ -422,32 +434,32 @@ series.columns.template.adapter.add("fill", function(fill, target) {
         </div>
             <div class="col-md-12 d-flex text-center mb-3">
               <div class="col-md-6" data-aos="fade-down" data-aos-delay="1000">
-                <img src="assets/img/saveme01.jpg" alt="" class="img-fluid">
+                <img src="assets/img/saveme01.jpg" alt="">
               </div>
               <div class="col-md-6" data-aos="fade-down" data-aos-delay="1000">
-                <img src="assets/img/saveme05.jpg" alt="" class="img-fluid">
+                <img src="assets/img/saveme05.jpg" alt="">
               </div>
             </div>
-            <div class="row col-md-12 d-flex text-center">
+            <div class="col-md-12 d-flex text-center">
               <div class="col-md-4" data-aos="fade-right" data-aos-delay="1000">
-                <img src="assets/img/saveme02.jpg" alt="" class="mb-3">
+                <img src="assets/img/saveme02.jpg" alt="">
               </div>
               <div class="col-md-4 text-center prevention" data-aos="fade" data-aos-delay="500"
               id="preventionSub">
                 <div class="line mb-2"></div>
                 <h5><strong>Prevention<br>생활 속 예방수칙</strong></h5>
-                <p class="text-center">전 세계적으로 코로나바이러스의 위험성이 커지는 가운데, 최소한의 생활을 위해 현대인들은 밖으로 나갈 수 밖에 없다. 개인위생이 철저해야 각종 질병으로부터 예방할 수 있고, 본인뿐만 아니라 타인에게 전파되는것을 막을 수 있다.</p>
+                <p class="text-left">전 세계적으로 코로나바이러스의 위험성이 커지는 가운데, 최소한의 생활을 위해 현대인들은 밖으로 나갈 수 밖에 없다. 개인위생이 철저해야 각종 질병으로부터 예방할 수 있고, 본인뿐만 아니라 타인에게 전파되는것을 막을 수 있다.</p>
               </div>
               <div class="col-md-4" data-aos="fade-left" data-aos-delay="1000">
-                <img src="assets/img/saveme03.jpg" alt="" class="mb-3">
+                <img src="assets/img/saveme03.jpg" alt="">
               </div>
             </div>
             <div class="col-md-12 d-flex text-center">
               <div class="col-md-6" data-aos="fade-right" data-aos-delay="1000">
-                <img src="assets/img/saveme04.jpg" alt="" class="img-fluid">
+                <img src="assets/img/saveme04.jpg" alt="">
               </div>
               <div class="col-md-6" data-aos="fade-left" data-aos-delay="1000">
-                <img src="assets/img/saveme06.jpg" alt="" class="img-fluid">
+                <img src="assets/img/saveme06.jpg" alt="">
               </div>
             </div>
         </div>
@@ -457,23 +469,21 @@ series.columns.template.adapter.add("fill", function(fill, target) {
   </section>
   <section id="team" class="team">
     <div class="container" data-aos="fade-up">
-      <div class="row">
-        <div class="col-md-12">
-          <header class="section-header text-center mb-5">
-            <h2>#Challenge</h2>
-          </header>
-          </div>
-          <div class="col-md-4 col-4" data-aos="fade-up" data-aos-delay="100">
+        <header class="section-header text-center mb-5">
+          <h2>#Challenge</h2>
+        </header>
+        <div class="row">
+          <div class="col-lg-4 col-md-4" data-aos="fade-up" data-aos-delay="100">
             <div class="member">
               <img src="assets/img/challenge/foricon.jpg" alt="" class="img-fluid">
             </div>
           </div>
-          <div class="col-md-4 col-4" data-aos="fade-up" data-aos-delay="500">
+          <div class="col-lg-4 col-md-4" data-aos="fade-up" data-aos-delay="500">
             <div class="member">
               <img src="assets/img/challenge/flower.png" alt="" class="img-fluid">
             </div>
           </div>
-          <div class="col-md-4 col-4" data-aos="fade-up" data-aos-delay="900">
+          <div class="col-lg-4 col-md-4" data-aos="fade-up" data-aos-delay="900">
             <div class="member">
               <img src="assets/img/challenge/stayhomechallenge.png" alt="" class="img-fluid">
             </div>
@@ -496,7 +506,7 @@ series.columns.template.adapter.add("fill", function(fill, target) {
 
     <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
-        <div class="col-md-3 col-4 portfolio-item filter-thanksto">
+        <div class="col-sm-3 portfolio-item filter-thanksto">
           <div class="portfolio-wrap">
             <img src="assets/img/challenge/for10.jpg" alt="" class="img-fluid">
             <div class="portfolio-info">
@@ -508,7 +518,7 @@ series.columns.template.adapter.add("fill", function(fill, target) {
             </div>
           </div>
         </div>
-        <div class="col-md-3 col-4 portfolio-item filter-thanksto">
+        <div class="col-sm-3 portfolio-item filter-thanksto">
           <div class="portfolio-wrap">
             <img src="assets/img/challenge/for01.jpg" alt="" class="img-fluid">
             <div class="portfolio-info">
@@ -520,7 +530,7 @@ series.columns.template.adapter.add("fill", function(fill, target) {
             </div>
           </div>
         </div>
-        <div class="col-md-3 col-4 portfolio-item filter-flowerbucket">
+        <div class="col-sm-3 portfolio-item filter-flowerbucket">
           <div class="portfolio-wrap">
             <img src="assets/img/challenge/flower01.jpg" alt="" class="img-fluid">
             <div class="portfolio-info">
@@ -532,7 +542,7 @@ series.columns.template.adapter.add("fill", function(fill, target) {
             </div>
           </div>
         </div>
-        <div class="col-md-3 col-4 portfolio-item filter-thanksto">
+        <div class="col-sm-3 portfolio-item filter-thanksto">
           <div class="portfolio-wrap">
             <img src="assets/img/challenge/for02.jpg" alt="" class="img-fluid">
             <div class="portfolio-info">
@@ -544,7 +554,7 @@ series.columns.template.adapter.add("fill", function(fill, target) {
             </div>
           </div>
         </div>
-        <div class="col-md-3 col-4 portfolio-item filter-stayhome">
+        <div class="col-sm-3 portfolio-item filter-stayhome">
           <div class="portfolio-wrap">
             <img src="assets/img/challenge/stayhome02.jpg" alt="" class="img-fluid">
             <div class="portfolio-info">
@@ -556,7 +566,7 @@ series.columns.template.adapter.add("fill", function(fill, target) {
             </div>
           </div>
         </div>
-        <div class="col-md-3 col-4 portfolio-item filter-thanksto">
+        <div class="col-sm-3 portfolio-item filter-thanksto">
           <div class="portfolio-wrap">
             <img src="assets/img/challenge/for04.jpg" alt="" class="img-fluid">
             <div class="portfolio-info">
@@ -568,7 +578,7 @@ series.columns.template.adapter.add("fill", function(fill, target) {
             </div>
           </div>
         </div>
-        <div class="col-md-3 col-4 portfolio-item filter-flowerbucket">
+        <div class="col-sm-3 portfolio-item filter-flowerbucket">
           <div class="portfolio-wrap">
             <img src="assets/img/challenge/flower02.jpg" alt="" class="img-fluid">
             <div class="portfolio-info">
@@ -580,7 +590,7 @@ series.columns.template.adapter.add("fill", function(fill, target) {
             </div>
           </div>
         </div>
-        <div class="col-md-3 col-4 portfolio-item filter-stayhome">
+        <div class="col-sm-3 portfolio-item filter-stayhome">
           <div class="portfolio-wrap">
             <img src="assets/img/challenge/stayhome01.png" alt="" class="img-fluid">
             <div class="portfolio-info">
@@ -592,7 +602,7 @@ series.columns.template.adapter.add("fill", function(fill, target) {
             </div>
           </div>
         </div>
-        <div class="col-md-3 col-4 portfolio-item filter-thanksto">
+        <div class="col-sm-3 portfolio-item filter-thanksto">
           <div class="portfolio-wrap">
             <img src="assets/img/challenge/for06.jpg" alt="" class="img-fluid">
             <div class="portfolio-info">
@@ -604,7 +614,7 @@ series.columns.template.adapter.add("fill", function(fill, target) {
             </div>
           </div>
         </div>
-        <div class="col-md-3 col-4 portfolio-item filter-thanksto">
+        <div class="col-sm-3 portfolio-item filter-thanksto">
           <div class="portfolio-wrap">
             <img src="assets/img/challenge/for05.jpg" alt="" class="img-fluid">
             <div class="portfolio-info">
@@ -616,7 +626,7 @@ series.columns.template.adapter.add("fill", function(fill, target) {
             </div>
           </div>
         </div>
-        <div class="col-md-3 col-4 portfolio-item filter-thanksto">
+        <div class="col-sm-3 portfolio-item filter-thanksto">
           <div class="portfolio-wrap">
             <img src="assets/img/challenge/for08.jpg" alt="" class="img-fluid">
             <div class="portfolio-info">
