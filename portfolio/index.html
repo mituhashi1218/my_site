@@ -1,11 +1,239 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Portfolio 김동균</title>
+	<title>Portfolio</title>
+	<link rel="stylesheet" href="css/fullpage.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+	<!-- script -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/fullpage.js"></script>
+	<script>
+		$(function(){
+			$("#fullpage").fullpage({
+				anchors:["a1st","a2st","a3st","a4st","a5st","a6st"],
+				menu:"#topMenu",
+				navigation:true,
+				afterLoad:function(anchorslink,index){
+					console.log(anchorslink+","+index);
+					if(index ==1){
+						$("#onViewOne").addClass("move");
+					}else{
+						$("onViewOne").removeClass("move");
+					}
+					if(index ==2){
+						$("onViewTwo").addClass("move");
+					}else{
+						$("onViewTwo").removeClass("move");
+					}
+				}
+			});
+		});
+
+	</script>
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </head>
+<style>
+
+	@font-face {
+    font-family: 'GmarketSansLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;}
+    @font-face {
+    font-family: 'GmarketSansBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;}
+    @font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;}
+
+    html, body{font-family:GmarketSansLight;}
+	#page1{height: 930px;background-color:rgb(137,136,255);position: relative;}
+	#page2{height: 930px;background-color:#fff;position: relative;}
+	#page3{height: 930px;background-color:#fff;position: relative;}
+	#page4{height: 930px;background-color:#fff;position: relative;}
+
+
+	/* 메뉴 */
+	#menu{position: absolute;display: block;width: 100%;height: 60px;top: 0;margin:0;}
+	.btn_menu{position: fixed;width: 50px;height: 50px;background-color: #fff;box-shadow:0px 0px 15px 0px rgba(0,0,0,0.25);z-index:99;
+		top: 25px;right: 25px;border-radius:50%;cursor: pointer;transition:all ease 0.5s;}
+	.btn_menu:hover{background-color: #ff9e80;}
+	.btn_menu span{width: 22px;height: 2px;display: block;background-color: #706fff;margin:16px auto 0;position: relative;}
+	.btn_menu span:before{content:"";position: absolute;width: 22px;height: 2px;top: 8px;left: 0;background-color: #706fff;}
+	.btn_menu span:after{content:"";position: absolute;width: 22px;height: 2px;top: 16px;left: 0;background-color: #706fff;}
+	.btn_menu:hover span{background-color: #fff;}
+	.btn_menu:hover span:before{background-color: #fff;}
+	.btn_menu:hover span:after{background-color: #fff;}
+
+	/*스크롤*/
+	.scroll{position: absolute;bottom: 5%;left: 50%;transform:translateX(-50%);animation:xScroll 0.8s infinite alternate;}
+	@keyframes xScroll{
+		from{bottom:30px;}
+		to{bottom:50px;}
+	}
+
+	/*메인페이지*/
+	.portfolio{width: 250px;transform:rotateZ(90deg);position: absolute;top:140px;left: -70px;color:rgba(255,255,255,0.5);display: block;}
+	.title{width: 250px;transform:rotateZ(90deg);position: absolute;top:140px;left: -70px;color:rgba(10,10,10,0.5);display: block;}
+	.main{width: 500px;position: absolute;left: 50%;bottom: 40%;transform:translateX(-50%);}
+	.main h3{text-align: center;}
+	#page1 div h3{font-size:2.5em;color:#fff;}
+	#page1 div h3:first-child{animation-duration:2s;animation-delay:1s;animation-fill-mode: both;}
+	#page1 div h3:nth-child(2){animation-duration:3s;animation-delay:2s;animation-fill-mode: both;}
+	#page1 div h3:nth-child(3){animation-duration:4s;animation-delay:3s;animation-fill-mode: both;font-family:GmarketSansBold;}
+
+	/*about 페이지*/
+	#page2 div.main{width: 1200px;position: absolute;left: 50%;bottom: 25%;transform:translateX(-50%);}
+	#page2 div.main .inner{width: 1200px;margin: auto;}
+	#page2 div ul h3{font-size:2.5em;font-family:GmarketSansBold;color:#363636;text-align: center;}
+	#page2 div ul li{float: left;text-align: center;margin-top: 100px;}
+	#page2 div ul li.textLeft{width: 599px;padding-top: 130px;text-align: center;}
+	#page2 div ul li.textRight{width: 599px;padding-top: 60px;position: relative;}
+	#page2 .main .inner ul .textLeft h4{font-size: 2.0rem; line-height: 2.0;font-family:GmarketSansBold;padding-left:100px;}
+	#page2 .main .inner ul .textRight .list_item{font-size: 1.4rem; line-height: 2.2;text-align: left;padding-left: 30px;}
+	#page2 .main .inner ul .textRight .list_item::before {display: inline-block; width: 5px; height: 5px; margin-bottom: 4px; margin-right: 8px; vertical-align: middle; background-color: #141414; content: "";}
+	.btn_line{display:inline-block;margin:1.5rem 0  0 0px;padding:12px 20px;color:#8988ff;border-radius:4px;border:solid 1px #8988ff;
+		cursor:pointer;z-index:1;transition:0.4s;position: absolute;left:5%;font-family:GmarketSansMedium;}
+	.btn_text{color:#8988ff;}
+	.btn_line:hover{text-decoration:none;color:#fff;background-color: #8988ff;}
+	.btn_line:hover .btn_text{color:#fff;}
+	.btn_line:after{position: absolute;left: 0;}
+
+	/*skills 페이지*/
+	#page3 div.main{width: 1200px;position: absolute;left: 50%;bottom: 40%;transform:translateX(-50%);}
+	#page3 div.main .inner{width: 1200px;margin: auto;}
+	#page3 div ul li{float: left;text-align: center;}
+	#page3 div ul li.textLeft{width: 599px;text-align: center;}
+	#page3 div ul li.textRight{width: 599px;position: relative;}
+	#page3 div ul li.textRight p{text-align: left;line-height: 40px;}
+	#page3 div ul li.textRight p img{width: 20px;height: 20px;}
+	#page3 div ul li.textRight p span{font-family:GmarketSansMedium;}
+	#page3 .main .inner ul .textLeft h4{font-size: 2.0rem; line-height: 2.0;font-family:GmarketSansBold;padding-left:100px;}
+
+</style>
 <body>
-	
+	<!-- 김보배 포트폴리오 페이지 http://www.bobaekim1212.com/#4thpage background-color:rgb(137,136,255);-->
+	<nav id="navTop">
+		<div class="btn_menu">
+			<span></span>
+		</div>
+		<ul class="hidden_menu">
+			
+		</ul>
+	</nav>
+	<div id="fullpage">
+		<div class="section" id="page1" data-anchor="a1st">
+			<h1 class="portfolio">
+					Portfolio 2021
+			</h1>
+			<div class="main" id="onViewOne">
+				<h3 class="fadeInLeft">안녕하세요,</h3>
+				<h3 class="fadeInLeft">매일 발전하기를 꿈꾸는</h3>
+				<h3 class="fadeInLeft">웹 디자이너 & 퍼블리셔<br> 김동균입니다.</h3>
+			</div>
+		</div>
+		<div class="scroll">
+			<a href="#a2st"><img src="image/btn_scroll.png" alt=""></a>
+		</div> 
+		<!-- page1 -->
+		<div class="section" id="page2" data-anchor="a2st">
+			<h1 class="title">
+					About
+			</h1>
+			<div class="main" id="onViewTwo">
+				<div class="inner">
+					<ul class="clearfix">
+						<h3>무한한 성장 가능성을 가진<br><span style="color:rgb(137,136,255);">"숨겨진 원석"</span>을 찾고 계시나요?</h3>
+						<li class="textLeft">
+							<h4>그렇다면 제가 딱<br>어울릴 것 같아요:)</h4>
+						</li>
+						<li class="bar" style="width: 1px;height: 400px;background: #000;">
+							
+						</li>
+						<li class="textRight">
+							<p class="list_item">새로운 도전을 두려워하지 않아요.</p>
+							<p class="list_item">책임감을 가지고 맡은 일은 끝까지 해내요</p>
+							<p class="list_item">주춤해도 무너지지 않는 끈기를 가지고 있어요</p>
+							<p class="list_item">주변 환경에 빠르고 유연하게 적응할 수 있어요</p>
+							<p class="list_item">주변 환경에 빠르고 유연하게 적응할 수 있어요</p>
+							<a href="#" target="_blank" class="btn_line">
+								<span class="btn_text">이력서 (링크)</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="scroll">
+			<a href="#a3st"><img src="image/btn_scroll2.png" alt=""></a>
+			</div>
+		</div>
+		<div class="section" id="page3" data-anchor="a3st">
+			<h1 class="title">
+					Skills
+			</h1>
+			<div class="main" id="onViewThree">
+				<div class="inner">
+					<ul class="clearfix">
+						<li class="textLeft">
+							<h4><span style="color:rgb(137,136,255);">#디자인 #퍼블리싱 #협업</span><br>열심히 기본기를 다졌습니다.</h4>
+						</li>
+						<li class="textRight">
+							<p><img src="image/checked.png"><span>Photoshop + illustrator + Xd</span><br>사진보정 및 로고, 배너, 아이콘 등의 디자인 작업이 가능합니다.<br>XD를 활용하여 웹 사이트의 시안과 프로토타입 제작이 가능합니다.</p>
+							<p><img src="image/checked.png"><span>HTML + CSS</span><br>콘텐츠 내용에 알맞은 시맨틱 태그를 사용하여 코드를 작성합니다.<br>웹 표준 및 웹 접근성을 준수하여 반응형 레이아웃을 제작할 수 있습니다.</p>
+							<p><img src="image/checked.png"><span>JavaScript + jQuery</span><br>자바스크립트 ES6문법을 이해하고 활용할 수 있습니다.<br>제이쿼리를 활용하여 다양한 애니메이션과 기능을 구현할 수 있습니다.</p>
+							<p><img src="image/checked.png"><span>Co-work</span><br>원활한 협업을 위해 다양한 분야의 지식을 배우고 적용하며 공유합니다.<br>디자이너, 개발자와 가깝게 일하며, 함께 좋은 결과물을 만들고자 노력합니다.</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="scroll">
+			<a href="#a4st"><img src="image/btn_scroll2.png" alt=""></a>
+			</div>
+		</div>
+		<div class="section" id="page4" data-anchor="a4st">
+			<h1 class="title">
+					Project1
+			</h1>
+			<div class="main" id="onViewFour">
+				<h3>Lorem, ipsum.</h3>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, vitae.</p>
+			</div>
+			<div class="scroll">
+			<a href="#a5st"><img src="image/btn_scroll2.png" alt=""></a>
+			</div>
+		</div>
+		<div class="section" id="page5" data-anchor="a5st">
+			<h1 class="title">
+					Project2
+			</h1>
+			<div class="main" id="onViewFour">
+				<h3>Lorem, ipsum.</h3>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, vitae.</p>
+			</div>
+			<div class="scroll">
+			<a href="#a6st"><img src="image/btn_scroll2.png" alt=""></a>
+			</div>
+		</div>
+		<div class="section" id="page6" data-anchor="a6st">
+			<h1 class="title">
+					Project3
+			</h1>
+			<div class="main" id="onViewFour">
+				<h3>Lorem, ipsum.</h3>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, vitae.</p>
+			</div>
+			<div class="scroll">
+			<a href="#a1st"><img src="image/btn_top.png" alt=""></a>
+			</div>
+		</div>					
+	</div>
 </body>
 </html>

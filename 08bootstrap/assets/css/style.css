@@ -712,7 +712,7 @@ section {
 .counters span {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
-  font-size: 28px;
+  font-size: 45px;
   display: block;
   color: #555186;
 }
@@ -725,7 +725,6 @@ section {
   font-size: 15px;
   color: #8a87b6;
 }
-
 .checking p, .checking span{color:#00c300;}
 .dead p, .dead span{color:#db001f;}
 
