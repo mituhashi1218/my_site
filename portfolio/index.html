@@ -14,7 +14,7 @@
 	<script>
 		$(function(){
 			$("#fullpage").fullpage({
-				anchors:["a1st","a2st","a3st","a4st","a5st","a6st"],
+				anchors:["a1st","a2st","a3st","a4st","a5st","a6st","a7st"],
 				menu:"#topMenu",
 				navigation:true,
 				afterLoad:function(anchorslink,index){
@@ -32,9 +32,21 @@
 				}
 			});
 		});
+		$(document).ready(function(){
+			$(".toggleMenu").click(function(){
+				var toggle = $(this).attr("class")
 
+				if(toggle =="toggleMenu"){
+					$(this).addClass("change");
+					$(".hidden_menu").stop().animate({right:"0"},300);
+				}else{
+					$(this).removeClass("change");
+					$(".hidden_menu").stop().animate({right:"-100%"},300)
+				}
+			});
+		});
 	</script>
-	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script> <!-- 자동새로고침 -->
 </head>
 <style>
 
@@ -52,26 +64,32 @@
     font-family: 'GmarketSansMedium';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
     font-weight: normal;
-    font-style: normal;}
+    font-style: normal;} /*font*/
 
-    html, body{font-family:GmarketSansLight;}
-	#page1{height: 930px;background-color:rgb(137,136,255);position: relative;}
-	#page2{height: 930px;background-color:#fff;position: relative;}
-	#page3{height: 930px;background-color:#fff;position: relative;}
-	#page4{height: 930px;background-color:#fff;position: relative;}
+    html, body{font-family:GmarketSansLight;position: relative;}
+    .section{height: 930px;position: relative;}
 
 
 	/* 메뉴 */
-	#menu{position: absolute;display: block;width: 100%;height: 60px;top: 0;margin:0;}
 	.btn_menu{position: fixed;width: 50px;height: 50px;background-color: #fff;box-shadow:0px 0px 15px 0px rgba(0,0,0,0.25);z-index:99;
 		top: 25px;right: 25px;border-radius:50%;cursor: pointer;transition:all ease 0.5s;}
 	.btn_menu:hover{background-color: #ff9e80;}
-	.btn_menu span{width: 22px;height: 2px;display: block;background-color: #706fff;margin:16px auto 0;position: relative;}
-	.btn_menu span:before{content:"";position: absolute;width: 22px;height: 2px;top: 8px;left: 0;background-color: #706fff;}
-	.btn_menu span:after{content:"";position: absolute;width: 22px;height: 2px;top: 16px;left: 0;background-color: #706fff;}
-	.btn_menu:hover span{background-color: #fff;}
-	.btn_menu:hover span:before{background-color: #fff;}
-	.btn_menu:hover span:after{background-color: #fff;}
+	.btn_menu div{transition:0.5s;}
+	.btn_menu .bar1{width: 22px;height: 2px;display: block;background-color: #706fff;margin:16px auto 0;}
+	.btn_menu .bar2{width: 22px;height: 2px;display: block;background-color: #706fff;margin:6px auto 0;}
+	.btn_menu .bar3{width: 22px;height: 2px;display: block;background-color: #706fff;margin:6px auto 0;}
+	.change .bar1{transform: translateY(8px)rotate(-45deg);}
+	.change .bar2{opacity: 0;}
+	.change .bar3{transform: translateY(-8px)rotate(45deg);}
+	.btn_menu:hover .bar1{background-color:#fff;}
+	.btn_menu:hover .bar2{background-color:#fff;}
+	.btn_menu:hover .bar3{background-color:#fff;}
+
+	.hidden_menu{width: 20%;height:100%;position:fixed;background-color:#f0eee8;top: 0;right:-20%;z-index:1;}
+	.hidden_menu ul{position: absolute;bottom: 40%;left:20%;}
+	.hidden_menu ul li{line-height: 30px;font-size:2em;margin-top: 20px;}
+	.hidden_menu ul li a{color: #706fff;transition:0.3s;}
+	.hidden_menu ul li a:hover{opacity:0.5;}
 
 	/*스크롤*/
 	.scroll{position: absolute;bottom: 5%;left: 50%;transform:translateX(-50%);animation:xScroll 0.8s infinite alternate;}
@@ -85,6 +103,7 @@
 	.title{width: 250px;transform:rotateZ(90deg);position: absolute;top:140px;left: -70px;color:rgba(10,10,10,0.5);display: block;}
 	.main{width: 500px;position: absolute;left: 50%;bottom: 40%;transform:translateX(-50%);}
 	.main h3{text-align: center;}
+	#page1{background-color:rgb(137,136,255);}
 	#page1 div h3{font-size:2.5em;color:#fff;}
 	#page1 div h3:first-child{animation-duration:2s;animation-delay:1s;animation-fill-mode: both;}
 	#page1 div h3:nth-child(2){animation-duration:3s;animation-delay:2s;animation-fill-mode: both;}
@@ -108,31 +127,42 @@
 	.btn_line:after{position: absolute;left: 0;}
 
 	/*skills 페이지*/
-	#page3 div.main{width: 1200px;position: absolute;left: 50%;bottom: 40%;transform:translateX(-50%);}
+	#page3 div.main{width: 1200px;position: absolute;left: 50%;bottom: 30%;transform:translateX(-50%);}
 	#page3 div.main .inner{width: 1200px;margin: auto;}
 	#page3 div ul li{float: left;text-align: center;}
 	#page3 div ul li.textLeft{width: 599px;text-align: center;}
+	#page3 div ul li.textLeft h4{padding:150px 50px 0 0;}
 	#page3 div ul li.textRight{width: 599px;position: relative;}
 	#page3 div ul li.textRight p{text-align: left;line-height: 40px;}
-	#page3 div ul li.textRight p img{width: 20px;height: 20px;}
-	#page3 div ul li.textRight p span{font-family:GmarketSansMedium;}
+	#page3 div ul li.textRight p img{width: 20px;height: 20px;vertical-align:middle;}
+	#page3 div ul li.textRight p span{font-family:GmarketSansMedium;padding-left: 5px;}
 	#page3 .main .inner ul .textLeft h4{font-size: 2.0rem; line-height: 2.0;font-family:GmarketSansBold;padding-left:100px;}
 
 </style>
 <body>
 	<!-- 김보배 포트폴리오 페이지 http://www.bobaekim1212.com/#4thpage background-color:rgb(137,136,255);-->
-	<nav id="navTop">
+	<nav class="toggleMenu">
 		<div class="btn_menu">
-			<span></span>
+			<div class="bar1"></div>
+			<div class="bar2"></div>
+			<div class="bar3"></div>
 		</div>
-		<ul class="hidden_menu">
-			
-		</ul>
+		<div class="hidden_menu">
+			<ul>
+				<li><a href="#a1st">Welcome</a></li>
+				<li><a href="#a2st">About</a></li>
+				<li><a href="#a3st">Skills</a></li>
+				<li><a href="#a4st">Contents1</a></li>
+				<li><a href="#a5st">Contents2</a></li>
+				<li><a href="#a6st">Contents3</a></li>
+				<li><a href="#a7st">Contact</a></li>
+			</ul>
+		</div>
 	</nav>
 	<div id="fullpage">
 		<div class="section" id="page1" data-anchor="a1st">
 			<h1 class="portfolio">
-					Portfolio 2021
+					Portfolio 2022
 			</h1>
 			<div class="main" id="onViewOne">
 				<h3 class="fadeInLeft">안녕하세요,</h3>
@@ -225,6 +255,18 @@
 		<div class="section" id="page6" data-anchor="a6st">
 			<h1 class="title">
 					Project3
+			</h1>
+			<div class="main" id="onViewFour">
+				<h3>Lorem, ipsum.</h3>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, vitae.</p>
+			</div>
+			<div class="scroll">
+			<a href="#a1st"><img src="image/btn_scroll2.png" alt=""></a>
+			</div>
+		</div>
+		<div class="section" id="page7" data-anchor="a7st">
+			<h1 class="title">
+					Contact
 			</h1>
 			<div class="main" id="onViewFour">
 				<h3>Lorem, ipsum.</h3>
