@@ -119,12 +119,11 @@
 	#page2 .main .inner ul .textLeft h4{font-size: 2.0rem; line-height: 2.0;font-family:GmarketSansBold;padding-left:100px;}
 	#page2 .main .inner ul .textRight .list_item{font-size: 1.4rem; line-height: 2.2;text-align: left;padding-left: 30px;}
 	#page2 .main .inner ul .textRight .list_item::before {display: inline-block; width: 5px; height: 5px; margin-bottom: 4px; margin-right: 8px; vertical-align: middle; background-color: #141414; content: "";}
-	.btn_line{display:inline-block;margin:1.5rem 0  0 0px;padding:12px 20px;color:#8988ff;border-radius:4px;border:solid 1px #8988ff;
-		cursor:pointer;z-index:1;transition:0.4s;position: absolute;left:5%;font-family:GmarketSansMedium;}
-	.btn_text{color:#8988ff;}
-	.btn_line:hover{text-decoration:none;color:#fff;background-color: #8988ff;}
-	.btn_line:hover .btn_text{color:#fff;}
-	.btn_line:after{position: absolute;left: 0;}
+	#page2 .main .inner ul .textRight .btn_line{display:inline-block;margin:1.5rem 0  0 0px;padding:12px 20px;color:#8988ff;border-radius:4px;border:solid 1px #8988ff;cursor:pointer;z-index:1;transition:0.4s;position: absolute;left:5%;font-family:GmarketSansMedium;}
+	#page2 .main .inner ul .textRight .btn_line .btn_text{color:#8988ff;}
+	#page2 .main .inner ul .textRight .btn_line:hover{text-decoration:none;color:#fff;background-color: #8988ff;}
+	#page2 .main .inner ul .textRight .btn_line:hover .btn_text{color:#fff;}
+	#page2 .main .inner ul .textRight .btn_line:after{position: absolute;left: 0;}
 
 	/*skills 페이지*/
 	#page3 div.main{width: 1200px;position: absolute;left: 50%;bottom: 30%;transform:translateX(-50%);}
@@ -140,18 +139,32 @@
 
 	/*project01*/
 	#page4{background-image: url("image/project01_bgc.jpg");position: relative;}
-	#page4 h4.title{color:#fff;}
-	#page4 div.main{left: 30%;top: 15%;}
-	#page4 div.main p{color:#fff;margin-top: 20px;}
-	#page4 div.main p span{font-family:GmarketSansMedium;font-size:1.2rem;}
-	#page4 img{position: absolute;}
-	#page4 img.iMac{bottom:10%;right: 10%;}
-	#page4 img.iPad{bottom:25%;right: 15%;}
-	#page4 div.main h3{text-align: left;font-size:2.0rem;font-family:GmarketSansBold;color:#fff;}
+	#page4 h1.title{color:#fff;}
+	#page4 div.main{left: 20%;top: 15%;animation-duration:1s;animation-delay:1s;animation-fill-mode:both;}
+	#page4 div.main p{color:#fff;margin-top: 30px;font-size:1.2rem;}
+	#page4 div.main p span{font-family:GmarketSansMedium;font-size:1.4rem;}
+	#page4 img.iMac{bottom:10%;right: 10%;position: absolute;animation-duration:1s;animation-delay:2s;animation-fill-mode:both;}
+	#page4 img.iPad{bottom:25%;right: 15%;position: absolute;animation-duration:1s;animation-delay:3s;animation-fill-mode:both;}
+	#page4 div.main h3{text-align: left;font-size:1.8rem;font-family:GmarketSansBold;color:#fff;}
+	#page4 div.main h3 span{color:#d70101;font-size:2.0rem;}
+	#page4 div.main .btn_link{width: 300px;display:inline-block;margin:1.5rem 0  0 0px;padding:12px 20px;color:#fff;border-radius:4px;border:solid 1px #8988ff;cursor:pointer;position: absolute;left:0%;font-family:GmarketSansMedium;text-align: center;background-color: #8988ff;transition:0.3s;box-shadow:-1px 1px 10px #7fa3b3;opacity:80%;}
+	#page4 div.main .btn_link:hover{box-shadow:-7px 7px 10px #7fa3b3;opacity:100;}
 
+	/*project02*/
+	#page5{position: relative;}
+	#page5{color:;}
+	#page5 div.main{left:55%;top: 15%;animation-duration:1s;animation-delay:1s;animation-fill-mode:both;}
+	#page5 div.main p{color:;margin-top: 30px;font-size:1.2rem;}
+	#page5 div.main p span{font-family:GmarketSansMedium;font-size:1.4rem;}
+	#page5 img.iMac{bottom:10%;left: 10%;position: absolute;animation-duration:1s;animation-delay:2s;animation-fill-mode:both;}
+	#page5 img.iPad{bottom:25%;left: 37%;position: absolute;animation-duration:1s;animation-delay:3s;animation-fill-mode:both;}
+	#page5 div.main h3{text-align: left;font-size:1.8rem;font-family:GmarketSansBold;color:;}
+	#page5 div.main h3 span{color:#d70101;font-size:2.0rem;}
+	#page5 div.main .btn_link{width: 300px;display:inline-block;margin:1.5rem 0  0 0px;padding:12px 20px;color:#fff;border-radius:4px;border:solid 1px #8988ff;cursor:pointer;position: absolute;left:0%;font-family:GmarketSansMedium;text-align: center;background-color: #8988ff;transition:0.3s;box-shadow:-1px 1px 10px #f4f4f4;opacity:80%;}
+	#page5 div.main .btn_link:hover{box-shadow:-7px 7px 10px #f4f4f4;opacity:100;}
 </style>
 <body>
-	<!-- 김보배 포트폴리오 페이지 http://www.bobaekim1212.com/#4thpage background-color:rgb(137,136,255);-->
+	<!-- 포트폴리오 페이지 http://www.bobaekim1212.com/#4thpage background-color:rgb(137,136,255);-->
 	<nav class="toggleMenu">
 		<div class="btn_menu">
 			<div class="bar1"></div>
@@ -169,7 +182,7 @@
 				<li><a href="#a7st">Contact</a></li>
 			</ul>
 		</div>
-	</nav>
+	</nav> <!-- 메뉴 -->
 	<div id="fullpage">
 		<div class="section" id="page1" data-anchor="a1st">
 			<h1 class="portfolio">
@@ -183,8 +196,7 @@
 		</div>
 		<div class="scroll">
 			<a href="#a2st"><img src="image/btn_scroll.png" alt=""></a>
-		</div> 
-		<!-- page1 -->
+		</div> <!-- page1 -->
 		<div class="section" id="page2" data-anchor="a2st">
 			<h1 class="title">
 					About
@@ -213,9 +225,9 @@
 				</div>
 			</div>
 			<div class="scroll">
-			<a href="#a3st"><img src="image/btn_scroll2.png" alt=""></a>
+			<a href="#a3st"><img src="image/btn_scroll2.png" alt="" style="bottom: 10%;"></a>
 			</div>
-		</div>
+		</div><!-- page2 -->
 		<div class="section" id="page3" data-anchor="a3st">
 			<h1 class="title">
 					Skills
@@ -238,36 +250,51 @@
 			<div class="scroll">
 			<a href="#a4st"><img src="image/btn_scroll2.png" alt=""></a>
 			</div>
-		</div>
+		</div><!-- page3 -->
 		<div class="section" id="page4" data-anchor="a4st">
 			<h1 class="title">
 					Project1
 			</h1>
-			<img src="image/project01_imac.png" style="width: 800px;height: 800px;" class="iMac">
-			<img src="image/project01_ipad.png" style="width: 200px;height: 300px;" class="iPad">
-			<div class="main" id="onViewFour">
-				<h3>01<br>COVID-19 설명 페이지</h3>
+			<img src="image/project01_imac.png" style="width: 800px;height: 800px;" class="iMac fadeInRight">
+			<img src="image/project01_ipad.png" style="width: 200px;height: 300px;" class="iPad fadeInRight">
+			<div class="main fadeInLeft" id="onViewFour">
+				<h3>01<br><span>COVID-19</span> 설명 페이지</h3>
 				<p><span>작업내용</span><br>디자인 100% + 퍼블리싱 100%<br></p>
 				<p><span>사용기능</span><br>Bootstrap<br></p>
 				<p><span>사용프로그램</span><br>Photoshop,Sublime Text 3<br></p>
 				<p><span>소개</span><br>코로나바이러스의 설명과 그에 대한 우리의 대처법을<br>소개하는 사이트입니다. 전세계와 대한민국의 확진자수를 카운트업으로 나타내었고, 국내 지역별 확진자수를 차트로 비교해 볼 수 있게끔 만들어놓았습니다.</p>
+				<a href="https://mituhashi1218.github.io/my_site/08bootstrap/index_test.html" target="_blank" class="btn_link">
+					<span class="btn_text">
+						사이트보기
+					</span>
+				</a>
 			</div>
-			<div class="scroll">
-			<a href="#a5st"><img src="image/btn_scroll2.png" alt=""></a>
+			<div class="scroll" style="bottom:20%;">
+				<a href="#a5st"><img src="image/btn_scroll2.png" alt=""></a>
 			</div>
-		</div>
+		</div><!-- page4 -->
 		<div class="section" id="page5" data-anchor="a5st">
 			<h1 class="title">
 					Project2
 			</h1>
-			<div class="main" id="onViewFour">
-				<h3>Lorem, ipsum.</h3>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, vitae.</p>
+			<img src="image/project01_imac.png" style="width: 800px;height: 800px;" class="iMac fadeInLeft">
+			<img src="image/project01_ipad.png" style="width: 200px;height: 300px;" class="iPad fadeInLeft">
+			<div class="main fadeInRight" id="onViewFour">
+				<h3>01<br><span>COVID-19</span> 설명 페이지</h3>
+				<p><span>작업내용</span><br>디자인 100% + 퍼블리싱 100%<br></p>
+				<p><span>사용기능</span><br>Bootstrap<br></p>
+				<p><span>사용프로그램</span><br>Photoshop,Sublime Text 3<br></p>
+				<p><span>소개</span><br>코로나바이러스의 설명과 그에 대한 우리의 대처법을<br>소개하는 사이트입니다. 전세계와 대한민국의 확진자수를 카운트업으로 나타내었고, 국내 지역별 확진자수를 차트로 비교해 볼 수 있게끔 만들어놓았습니다.</p>
+				<a href="https://mituhashi1218.github.io/my_site/07fullpage/index.html" target="_blank" class="btn_link">
+					<span class="btn_text">
+						사이트보기
+					</span>
+				</a>
 			</div>
 			<div class="scroll">
 			<a href="#a6st"><img src="image/btn_scroll2.png" alt=""></a>
 			</div>
-		</div>
+		</div><!-- page5 -->
 		<div class="section" id="page6" data-anchor="a6st">
 			<h1 class="title">
 					Project3
