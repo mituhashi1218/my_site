@@ -85,9 +85,9 @@
 	.btn_menu:hover .bar2{background-color:#fff;}
 	.btn_menu:hover .bar3{background-color:#fff;}
 
-	.hidden_menu{width: 20%;height:100%;position:fixed;background-color:#f0eee8;top: 0;right:-20%;z-index:1;}
-	.hidden_menu ul{position: absolute;bottom: 40%;left:20%;}
-	.hidden_menu ul li{line-height: 30px;font-size:2em;margin-top: 20px;}
+	.hidden_menu{width: 15%;height:100%;position:fixed;background-color:#f0eee8;top: 0;right:-20%;z-index:1;}
+	.hidden_menu ul{position: absolute;bottom: 40%;left:15%;}
+	.hidden_menu ul li{line-height: 30px;font-size:1.8em;margin-top: 20px;}
 	.hidden_menu ul li a{color: #706fff;transition:0.3s;}
 	.hidden_menu ul li a:hover{opacity:0.5;}
 
@@ -141,27 +141,57 @@
 	#page4{background-image: url("image/project01_bgc.jpg");position: relative;}
 	#page4 h1.title{color:#fff;}
 	#page4 div.main{left: 20%;top: 15%;animation-duration:1s;animation-delay:1s;animation-fill-mode:both;}
-	#page4 div.main p{color:#fff;margin-top: 30px;font-size:1.2rem;}
+	#page4 div.main p{color:#fff;margin-top: 30px;font-size:1.2rem;text-shadow:2px 2px 5px #7fa3b3;}
 	#page4 div.main p span{font-family:GmarketSansMedium;font-size:1.4rem;}
-	#page4 img.iMac{bottom:10%;right: 10%;position: absolute;animation-duration:1s;animation-delay:2s;animation-fill-mode:both;}
-	#page4 img.iPad{bottom:25%;right: 15%;position: absolute;animation-duration:1s;animation-delay:3s;animation-fill-mode:both;}
-	#page4 div.main h3{text-align: left;font-size:1.8rem;font-family:GmarketSansBold;color:#fff;}
+	#page4 img.iMac{bottom:10%;right: 10%;position: absolute;animation-duration:1s;animation-delay:38s;animation-fill-mode:both;opacity: 70;}
+	#page4 img.iPad{bottom:25%;right: 15%;position: absolute;animation-duration:1s;animation-delay:37s;animation-fill-mode:both;opacity: 70;}
+	#page4 video{position: absolute;right: 20%;z-index:2;top:30%;box-shadow:-7px 5px 10px #7fa3b3;animation-name:video;animation-duration:1s;animation-fill-mode: both;animation-delay: 37s;}
+	@keyframes video{
+		0%{opacity:100;}
+		50%{opacity:50;}
+		100%{opacity:0;}
+	}
+	#page4 div.main h3{text-align: left;font-size:1.8rem;font-family:GmarketSansBold;color:#fff;text-shadow:2px 2px 5px #7fa3b3;}
 	#page4 div.main h3 span{color:#d70101;font-size:2.0rem;}
 	#page4 div.main .btn_link{width: 300px;display:inline-block;margin:1.5rem 0  0 0px;padding:12px 20px;color:#fff;border-radius:4px;border:solid 1px #8988ff;cursor:pointer;position: absolute;left:0%;font-family:GmarketSansMedium;text-align: center;background-color: #8988ff;transition:0.3s;box-shadow:-1px 1px 10px #7fa3b3;opacity:80%;}
 	#page4 div.main .btn_link:hover{box-shadow:-7px 7px 10px #7fa3b3;opacity:100;}
 
 	/*project02*/
-	#page5{position: relative;}
-	#page5{color:;}
+	#page5{background-image: url("image/project02_bgc.jpg");position: relative;}
+	#page5 h1.title{color:#fff;}
 	#page5 div.main{left:55%;top: 15%;animation-duration:1s;animation-delay:1s;animation-fill-mode:both;}
-	#page5 div.main p{color:;margin-top: 30px;font-size:1.2rem;}
+	#page5 div.main p{color:#fff;margin-top: 30px;font-size:1.2rem;text-shadow:2px 2px 5px #879591;}
 	#page5 div.main p span{font-family:GmarketSansMedium;font-size:1.4rem;}
-	#page5 img.iMac{bottom:10%;left: 10%;position: absolute;animation-duration:1s;animation-delay:2s;animation-fill-mode:both;}
-	#page5 img.iPad{bottom:25%;left: 37%;position: absolute;animation-duration:1s;animation-delay:3s;animation-fill-mode:both;}
-	#page5 div.main h3{text-align: left;font-size:1.8rem;font-family:GmarketSansBold;color:;}
-	#page5 div.main h3 span{color:#d70101;font-size:2.0rem;}
-	#page5 div.main .btn_link{width: 300px;display:inline-block;margin:1.5rem 0  0 0px;padding:12px 20px;color:#fff;border-radius:4px;border:solid 1px #8988ff;cursor:pointer;position: absolute;left:0%;font-family:GmarketSansMedium;text-align: center;background-color: #8988ff;transition:0.3s;box-shadow:-1px 1px 10px #f4f4f4;opacity:80%;}
-	#page5 div.main .btn_link:hover{box-shadow:-7px 7px 10px #f4f4f4;opacity:100;}
+	#page5 img.iMac{bottom:10%;left: 10%;position: absolute;animation-duration:1s;animation-delay:21s;animation-fill-mode:both;}
+	#page5 img.iPad{bottom:25%;left: 32%;position: absolute;animation-duration:1s;animation-delay:22s;animation-fill-mode:both;}
+	#page5 div.main h3{text-align: left;font-size:1.8rem;font-family:GmarketSansBold;color:#fff;text-shadow:2px 2px 5px #879591;}
+	#page5 div.main h3 span{color:#e86a00;font-size:2.0rem;}
+	#page5 div.main .btn_link{width: 300px;display:inline-block;margin:1.5rem 0  0 0px;padding:12px 20px;color:#fff;border-radius:4px;border:solid 1px #8988ff;cursor:pointer;position: absolute;left:0%;font-family:GmarketSansMedium;text-align: center;background-color: #8988ff;transition:0.3s;box-shadow:-1px 1px 10px #84938c;opacity:80%;}
+	#page5 div.main .btn_link:hover{box-shadow:-7px 7px 10px #84938c;opacity:100;}
+	#page5 video{position: absolute;left: 20%;z-index:2;top:30%;box-shadow:-7px 5px 10px #879591;animation-name:video2;animation-duration:1s;animation-fill-mode: both;animation-delay:19.8s;}
+	@keyframes video2{
+		0%{opacity:100;}
+		50%{opacity:50;}
+		100%{opacity:0;}
+	}
+
+	#page6{background-image: url("image/project03_bgc.jpg");position: relative;}
+	#page6 h1.title{color:#fff;}
+	#page6 div.main{left: 20%;top: 15%;animation-duration:1s;animation-delay:1s;animation-fill-mode:both;}
+	#page6 div.main p{color:#fff;margin-top: 30px;font-size:1.2rem;text-shadow:2px 2px 5px #7fa3b3;}
+	#page6 div.main p span{font-family:GmarketSansMedium;font-size:1.4rem;}
+	#page6 img.iMac{bottom:10%;right: 10%;position: absolute;animation-duration:1s;animation-delay:21s;animation-fill-mode:both;opacity: 70;}
+	#page6 img.iPad{bottom:25%;right: 15%;position: absolute;animation-duration:1s;animation-delay:22s;animation-fill-mode:both;opacity: 70;}
+	#page6 video{position: absolute;right: 20%;z-index:2;top:30%;box-shadow:-7px 5px 10px #7fa3b3;animation-name:video3;animation-duration:1s;animation-fill-mode: both;animation-delay:20s;}
+	@keyframes video3{
+		0%{opacity:100;}
+		50%{opacity:50;}
+		100%{opacity:0;}
+	}
+	#page6 div.main h3{text-align: left;font-size:1.8rem;font-family:GmarketSansBold;color:#fff;text-shadow:2px 2px 5px #7fa3b3;}
+	#page6 div.main h3 span{color:#7049b9;font-size:2.0rem;}
+	#page6 div.main .btn_link{width: 300px;display:inline-block;margin:1.5rem 0  0 0px;padding:12px 20px;color:#fff;border-radius:4px;border:solid 1px #8988ff;cursor:pointer;position: absolute;left:0%;font-family:GmarketSansMedium;text-align: center;background-color: #8988ff;transition:0.3s;box-shadow:-1px 1px 10px #7fa3b3;opacity:80%;}
+	#page6 div.main .btn_link:hover{box-shadow:-7px 7px 10px #7fa3b3;opacity:100;}
 </style>
 <body>
 	<!-- 포트폴리오 페이지 http://www.bobaekim1212.com/#4thpage background-color:rgb(137,136,255);-->
@@ -173,7 +203,7 @@
 		</div>
 		<div class="hidden_menu">
 			<ul>
-				<li><a href="#a1st">Welcome</a></li>
+				<li><a href="#a1st">Portfolio 2022</a></li>
 				<li><a href="#a2st">About</a></li>
 				<li><a href="#a3st">Skills</a></li>
 				<li><a href="#a4st">Contents1</a></li>
@@ -255,13 +285,16 @@
 			<h1 class="title">
 					Project1
 			</h1>
+			<video width="556px" height="277px" autoplay muted class="video">
+				<source src="image/Covid-19.mp4" type="video/mp4" style="width: 1000px;height: 500px;">
+			</video>
 			<img src="image/project01_imac.png" style="width: 800px;height: 800px;" class="iMac fadeInRight">
 			<img src="image/project01_ipad.png" style="width: 200px;height: 300px;" class="iPad fadeInRight">
 			<div class="main fadeInLeft" id="onViewFour">
-				<h3>01<br><span>COVID-19</span> 설명 페이지</h3>
+				<h3>01<br><span>COVID-19</span> 설명 사이트</h3>
 				<p><span>작업내용</span><br>디자인 100% + 퍼블리싱 100%<br></p>
 				<p><span>사용기능</span><br>Bootstrap<br></p>
-				<p><span>사용프로그램</span><br>Photoshop,Sublime Text 3<br></p>
+				<p><span>사용프로그램</span><br>Photoshop, Sublime Text 3<br></p>
 				<p><span>소개</span><br>코로나바이러스의 설명과 그에 대한 우리의 대처법을<br>소개하는 사이트입니다. 전세계와 대한민국의 확진자수를 카운트업으로 나타내었고, 국내 지역별 확진자수를 차트로 비교해 볼 수 있게끔 만들어놓았습니다.</p>
 				<a href="https://mituhashi1218.github.io/my_site/08bootstrap/index_test.html" target="_blank" class="btn_link">
 					<span class="btn_text">
@@ -277,14 +310,18 @@
 			<h1 class="title">
 					Project2
 			</h1>
-			<img src="image/project01_imac.png" style="width: 800px;height: 800px;" class="iMac fadeInLeft">
-			<img src="image/project01_ipad.png" style="width: 200px;height: 300px;" class="iPad fadeInLeft">
+			<img src="image/project02_imac.png" style="width: 800px;height: 800px;" class="iMac fadeInLeft">
+			<img src="image/project02_ipad.png" style="width:300px;height: 200px;" class="iPad fadeInRight">
+			<video width="556px" height="277px" autoplay muted class="video2">
+				<source src="image/Studio.mp4" type="video/mp4">
+			</video>
 			<div class="main fadeInRight" id="onViewFour">
-				<h3>01<br><span>COVID-19</span> 설명 페이지</h3>
+				<h3>02<br><span>Cinest Studio</span> 쇼룸 사이트</h3>
 				<p><span>작업내용</span><br>디자인 100% + 퍼블리싱 100%<br></p>
-				<p><span>사용기능</span><br>Bootstrap<br></p>
-				<p><span>사용프로그램</span><br>Photoshop,Sublime Text 3<br></p>
-				<p><span>소개</span><br>코로나바이러스의 설명과 그에 대한 우리의 대처법을<br>소개하는 사이트입니다. 전세계와 대한민국의 확진자수를 카운트업으로 나타내었고, 국내 지역별 확진자수를 차트로 비교해 볼 수 있게끔 만들어놓았습니다.</p>
+				<p><span>사용기능</span><br>Fullpage 3D<br></p>
+				<p><span>사용프로그램</span><br>Photoshop, illustrator, Sublime Text 3<br></p>
+				<p><span>소개</span><br>CINEST STUDIO라는 사진관을 소개하는 사이트입니다.<br> 3D 육면체를 이용한 풀페이지 스크립트를 사용하였으며,<br> 브랜드 쇼룸처럼 업체의 소개영상과 아이덴티티를 간단하게 나타내었습니다.
+				</p>
 				<a href="https://mituhashi1218.github.io/my_site/07fullpage/index.html" target="_blank" class="btn_link">
 					<span class="btn_text">
 						사이트보기
@@ -299,9 +336,22 @@
 			<h1 class="title">
 					Project3
 			</h1>
-			<div class="main" id="onViewFour">
-				<h3>Lorem, ipsum.</h3>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, vitae.</p>
+			<video width="556px" height="277px" autoplay muted class="video">
+				<source src="image/megabox.mp4" type="video/mp4" style="width: 1000px;height: 500px;">
+			</video>
+			<img src="image/project03_imac.png" style="width: 800px;height: 800px;" class="iMac fadeInRight">
+			<img src="image/project03_iphone.png" style="width: 200px;height: 300px;" class="iPad fadeInRight">
+			<div class="main fadeInLeft" id="onViewFour">
+				<h3>03<br><span>Megabox</span> 예매 사이트</h3>
+				<p><span>작업내용</span><br>디자인 100% + 퍼블리싱 100%<br></p>
+				<p><span>사용기능</span><br>Bxslider<br></p>
+				<p><span>사용프로그램</span><br>Photoshop, illustrator, Sublime Text 3<br></p>
+				<p><span>소개</span><br>메가박스 사이트를 참고하여 제작한 홈페이지입니다.<br>각 지점별 외관과 상영중인 영화를 슬라이더로 나타냈고,<br>각 이벤트와 예매 페이지도 세분화시켜 보다 보기쉽게 제작하였습니다.</p>
+				<a href="https://mituhashi1218.github.io/my_site/06company/index.html" target="_blank" class="btn_link">
+					<span class="btn_text">
+						사이트보기
+					</span>
+				</a>
 			</div>
 			<div class="scroll">
 			<a href="#a7st"><img src="image/btn_scroll2.png" alt=""></a>
