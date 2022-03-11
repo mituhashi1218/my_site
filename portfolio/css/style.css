@@ -1,83 +1,23 @@
-<style>
+@charset "utf-8";
+@import "pc.css" screen and (min-width:1080px);
+@import "tablet.css" screen and (min-width:768px) and (max-width:1079px);
+@import "mobile.css" screen and (max-width:767px);
 
-	@font-face {
-    font-family: 'GmarketSansLight';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;}
-    @font-face {
-    font-family: 'GmarketSansBold';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;}
-    @font-face {
-    font-family: 'GmarketSansMedium';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;}
+/*font*/
+@font-face {
+font-family: 'GmarketSansLight';
+src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+font-weight: normal;
+font-style: normal;}
+@font-face {
+font-family: 'GmarketSansBold';
+src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+font-weight: normal;
+font-style: normal;}
+@font-face {
+font-family: 'GmarketSansMedium';
+src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+font-weight: normal;
+font-style: normal;} /*font*/
 
-    html, body{font-family:GmarketSansLight;}
-	#page1{height: 930px;background-color:rgb(137,136,255);position: relative;}
-	#page2{height: 930px;background-color:#fff;position: relative;}
-	#page3{height: 930px;background-color:#fff;position: relative;}
-	#page4{height: 930px;background-color:#fff;position: relative;}
-
-
-	/* 메뉴 */
-	#menu{position: absolute;display: block;width: 100%;height: 60px;top: 0;margin:0;}
-	.btn_menu{position: fixed;width: 50px;height: 50px;background-color: #fff;box-shadow:0px 0px 15px 0px rgba(0,0,0,0.25);z-index:99;
-		top: 25px;right: 25px;border-radius:50%;cursor: pointer;transition:all ease 0.5s;}
-	.btn_menu:hover{background-color: #ff9e80;}
-	.btn_menu span{width: 22px;height: 2px;display: block;background-color: #706fff;margin:16px auto 0;position: relative;}
-	.btn_menu span:before{content:"";position: absolute;width: 22px;height: 2px;top: 8px;left: 0;background-color: #706fff;}
-	.btn_menu span:after{content:"";position: absolute;width: 22px;height: 2px;top: 16px;left: 0;background-color: #706fff;}
-	.btn_menu:hover span{background-color: #fff;}
-	.btn_menu:hover span:before{background-color: #fff;}
-	.btn_menu:hover span:after{background-color: #fff;}
-
-	/*스크롤*/
-	.scroll{position: absolute;bottom: 5%;left: 50%;transform:translateX(-50%);animation:xScroll 0.8s infinite alternate;}
-	@keyframes xScroll{
-		from{bottom:30px;}
-		to{bottom:50px;}
-	}
-
-	/*메인페이지*/
-	.portfolio{width: 250px;transform:rotateZ(90deg);position: absolute;top:140px;left: -70px;color:rgba(255,255,255,0.5);display: block;}
-	.title{width: 250px;transform:rotateZ(90deg);position: absolute;top:140px;left: -70px;color:rgba(10,10,10,0.5);display: block;}
-	.main{width: 500px;position: absolute;left: 50%;bottom: 40%;transform:translateX(-50%);}
-	.main h3{text-align: center;}
-	#page1 div h3{font-size:2.5em;color:#fff;}
-	#page1 div h3:first-child{animation-duration:2s;animation-delay:1s;animation-fill-mode: both;}
-	#page1 div h3:nth-child(2){animation-duration:3s;animation-delay:2s;animation-fill-mode: both;}
-	#page1 div h3:nth-child(3){animation-duration:4s;animation-delay:3s;animation-fill-mode: both;font-family:GmarketSansBold;}
-
-	/*about 페이지*/
-	#page2 div.main{width: 1200px;position: absolute;left: 50%;bottom: 25%;transform:translateX(-50%);}
-	#page2 div.main .inner{width: 1200px;margin: auto;}
-	#page2 div ul h3{font-size:2.5em;font-family:GmarketSansBold;color:#363636;text-align: center;}
-	#page2 div ul li{float: left;text-align: center;margin-top: 100px;}
-	#page2 div ul li.textLeft{width: 599px;padding-top: 130px;text-align: center;}
-	#page2 div ul li.textRight{width: 599px;padding-top: 60px;position: relative;}
-	#page2 .main .inner ul .textLeft h4{font-size: 2.0rem; line-height: 2.0;font-family:GmarketSansBold;padding-left:100px;}
-	#page2 .main .inner ul .textRight .list_item{font-size: 1.4rem; line-height: 2.2;text-align: left;padding-left: 30px;}
-	#page2 .main .inner ul .textRight .list_item::before {display: inline-block; width: 5px; height: 5px; margin-bottom: 4px; margin-right: 8px; vertical-align: middle; background-color: #141414; content: "";}
-	.btn_line{display:inline-block;margin:1.5rem 0  0 0px;padding:12px 20px;color:#8988ff;border-radius:4px;border:solid 1px #8988ff;
-		cursor:pointer;z-index:1;transition:0.4s;position: absolute;left:5%;font-family:GmarketSansMedium;}
-	.btn_text{color:#8988ff;}
-	.btn_line:hover{text-decoration:none;color:#fff;background-color: #8988ff;}
-	.btn_line:hover .btn_text{color:#fff;}
-	.btn_line:after{position: absolute;left: 0;}
-
-	/*skills 페이지*/
-	#page3 div.main{width: 1200px;position: absolute;left: 50%;bottom: 40%;transform:translateX(-50%);}
-	#page3 div.main .inner{width: 1200px;margin: auto;}
-	#page3 div ul li{float: left;text-align: center;}
-	#page3 div ul li.textLeft{width: 599px;text-align: center;}
-	#page3 div ul li.textRight{width: 599px;position: relative;}
-	#page3 div ul li.textRight p{text-align: left;line-height: 40px;}
-	#page3 div ul li.textRight p img{width: 20px;height: 20px;}
-	#page3 div ul li.textRight p span{font-family:GmarketSansMedium;}
-	#page3 .main .inner ul .textLeft h4{font-size: 2.0rem; line-height: 2.0;font-family:GmarketSansBold;padding-left:100px;}
-
-</style>
+html, body{font-family:GmarketSansLight;position: relative;}
