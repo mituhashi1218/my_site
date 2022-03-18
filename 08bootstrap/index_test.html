@@ -231,72 +231,76 @@ chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
 
 chart.data = [
   {
-    country: "서울",
-    visits: 102204
-  },
-  {
     country: "경기",
-    visits: 91713
+    visits: 2445654
   },
   {
-    country: "인천",
-    visits: 16077
-  },
-  {
-    country: "대구",
-    visits: 15664
+    country: "서울",
+    visits: 1894113
   },
   {
     country: "부산",
-    visits: 12809
+    visits: 663512
+  },
+  {
+    country: "인천",
+    visits: 565315
   },
   {
     country: "경남",
-    visits: 11637
+    visits: 497988
   },
   {
-    country: "충남",
-    visits: 9244
+    country: "대구",
+    visits: 340360
   },
   {
     country: "경북",
-    visits: 8439
+    visits: 299071
   },
   {
-    country: "대전",
-    visits: 7058
-  },
-  {
-    country: "강원",
-    visits: 6522
-  },
-  {
-    country: "충북",
-    visits: 6443
-  },
-  {
-    country: "검역",
-    visits: 6105
-  },
-  {
-    country: "울산",
-    visits: 5208
+    country: "충남",
+    visits: 294803
   },
   {
     country: "전북",
-    visits: 4570
+    visits: 243447
+  },
+  {
+    country: "광주",
+    visits: 230126
+  },
+  {
+    country: "충북",
+    visits: 221613
+  },
+  {
+    country: "대전",
+    visits: 211178
   },
   {
     country: "전남",
-    visits: 3135
+    visits: 210710
+  },
+  {
+    country: "강원",
+    visits: 200476
+  },
+  {
+    country: "울산",
+    visits: 171489
   },
   {
     country: "제주",
-    visits: 2892
+    visits: 103558
   },
   {
     country: "세종",
-    visits: 1258
+    visits: 53837
+  },
+  {
+    country: "검역",
+    visits: 10359
   },
 ];
 
@@ -308,13 +312,13 @@ categoryAxis.fontSize = 11;
 
 var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
 valueAxis.min = 0;
-valueAxis.max = 150000;
+valueAxis.max = 2600000;
 valueAxis.strictMinMax = true;
 valueAxis.renderer.minGridDistance = 30;
 // axis break
 var axisBreak = valueAxis.axisBreaks.create();
-axisBreak.startValue =80000;
-axisBreak.endValue =150000;
+axisBreak.startValue = false;
+axisBreak.endValue = false;
 axisBreak.breakSize = 0.005;
 
 // fixed axis break
@@ -372,40 +376,40 @@ series.columns.template.adapter.add("fill", function(fill, target) {
           <div class="col-md-12 d-flex counters mb-5" data-aos="fade-right" data-aos-delay="300">
               <div class="col-lg-3 col-6 text-center">
                 <p>누적 확진환자</p>
-                <span data-toggle="counter-up">235,137,710</span>
+                <span data-toggle="counter-up">465,612,610</span>
               </div>
               <div class="col-lg-3 col-6 text-center checking">
                 <p>발생국</p>
-                <span data-toggle="counter-up">222</span>
+                <span data-toggle="counter-up">226</span>
               </div>
 
               <div class="col-lg-3 col-6 text-center">
                 <p>치명률(%)</p>
-                <span data-toggle="counter-up">2.04</span>
+                <span data-toggle="counter-up">1.31</span>
               </div>
 
               <div class="col-lg-3 col-6 text-center dead">
                 <p>사망자</p>
-                <span data-toggle="counter-up">4,807,275</span>
+                <span data-toggle="counter-up">6,056,725</span>
               </div>
             </div>
           <h5 class="col-md-12 text-left" data-aos="fade-left" data-aos-delay="300">대한민국</h5>
           <div class="col-md-12 d-flex counters mb-5" data-aos="fade-left" data-aos-delay="300">
               <div class="col-lg-3 col-6 text-center">
                 <p>누적 확진환자</p>
-                <span data-toggle="counter-up">316,020</span>
+                <span data-toggle="counter-up">8,657,609</span>
               </div>
               <div class="col-lg-3 col-6 text-center checking">
                 <p>격리해제</p>
-                <span data-toggle="counter-up">277,092</span>
+                <span data-toggle="counter-up">969,524</span>
               </div>
               <div class="col-lg-3 col-6 text-center">
-                <p>검사진행</p>
-                <span data-toggle="counter-up">1,179,529</span>
+                <p>위중증</p>
+                <span data-toggle="counter-up">1,049</span>
               </div>
               <div class="col-lg-3 col-6 text-center dead">
                 <p>사망자</p>
-                <span data-toggle="counter-up">2,504</span>
+                <span data-toggle="counter-up">11,782</span>
               </div>
             </div>
           </div>
@@ -414,7 +418,7 @@ series.columns.template.adapter.add("fill", function(fill, target) {
         <div class="col-md-12 mb-5 text-left" data-aos="fade-up" data-aos-delay="300">
           <h5 class="mb-5">지역별 확진자</h5>
           <div id="chartdiv"></div>
-          <p class="text-right">(※본 차트는 2021년 10월 2일 기준으로 작성되었습니다.)</p>
+          <p class="text-right">(※본 차트는 2022년 03월 18일 기준으로 작성되었습니다.)</p>
         </div>
     </div>
   </section>
