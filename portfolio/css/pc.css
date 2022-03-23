@@ -132,11 +132,11 @@
 	#page6 div.main .btn_link:hover{box-shadow:-7px 7px 10px #7fa3b3;opacity:100;}
 
 	/*contact*/
-	#page7 div.main{width: 1200px;top: 15%;}
-	#page7 div.main .text_top h3{font-size:2.5em;font-family:GmarketSansBold;text-align:left;color:#484848;}
+	#page7 div.main{width:70%;top: 15%;}
+	#page7 div.main .text_top h3{font-size:2.4em;font-family:GmarketSansBold;text-align:left;color:#484848;}
 	#page7 div.main .text_top h3 span{color:#706fff;}
 	#page7 div.main .text_top p{text-align:left;font-size:1.3em;margin-top: 30px;font-family:GmarketSansMedium;color:#484848;}
-	#page7 div.main .text_bottom{margin-top: 250px;}
+	#page7 div.main .text_bottom{margin-top: 230px;}
 	#page7 div.main .text_bottom div.line{width: 500px;height: 3px;background-color:#747474;display: block;right:0;position: absolute;}
 	#page7 div.main .text_bottom p.comment{text-align: right;font-family:GmarketSansBold;font-size:1.5em;color:#484848;}
 	#page7 div.main .text_bottom a{float:right;display: block;margin-right:30px;}
