@@ -7,67 +7,37 @@
 </head>
 <body>
 
-상품마다 조금씩 다를 수 있습니다만, 최근 HTML은 양식을 맞춰서 사용하려고 노력했습니다.
-어느 순서에 어떤 주소를 넣어야하는지 숙지하시고 만드시면 보다 쉽게 만드실 수 있습니다.
-※맨 처음 <center>와 마지막에 </center>는 넣어주셔야합니다.
-
 <center>
-    <!-- ipark_00, ipark_event는
-    사업자의 전체적인 공지나 이벤트를 업로드 할 시에 사용하는 주소입니다.
-    ex)배송지연공지, 명절배송공지 -->
-    <img src="http://ipark.speedgabia.com/image/notice/ipark_00.jpg" /> <!--사업자공지-->
-    <img src="http://ipark.speedgabia.com/image/event/ipark_event.jpg" /> <!--사업자이벤트-->
+<img src="http://ipark.speedgabia.com/image/notice/ipark_00.jpg"> <!--/전체공지-->
+<img src="http://ipark.speedgabia.com/image/event/ipark_event.jpg"> <!--/전체이벤트-->
 
-    <!-- 브랜드_notice 이미지는
-    브랜드[소니,캐논,삼성등등]의 인트로 이미지를 업로드 할 시 사용하는 주소입니다.
-    카메라나 가전제품, 화장품등 카테고리 별로 다를 수 있으니, 확인하셔서 사용해주세요.  -->
-    <img src="http://ipark.speedgabia.com/image/samsung/samsung_notice/samsung_notice.gif" /> <!--브랜드공지-->
-    <img src="http://ipark.speedgabia.com/image/samsung/samsung_notice/samsung_notice.jpg" />
+<img src="http://ipark.speedgabia.com/image/samsung/samsung_notice/samsung_notice.gif"> <!--/삼성상단-->
+<img src="http://ipark.speedgabia.com/image/samsung/samsung_notice/samsung_notice2.jpg">
+<img src="http://ipark.speedgabia.com/image/samsung/galaxy_watch/galaxy_watch.jpg"> <!--/상단-->
 
-    <!-- 마켓( 옥션, 지마켓, 스마트스토어, 인터파크 )별로 공지가 있을 시 이 주소를 사용합니다.
-        마켓마다 할인이나 프로모션이 들어갈 수 있기 때문입니다.[없는것도 많습니다.앞으로 만드실때만 해주세요.] -->
-    <img src="http://ipark.speedgabia.com/image/notice/smartstore_notice.jpg" /> <!--채널공지-->
+<img src="http://ipark.speedgabia.com/image/samsung/galaxy_watch/sm_r895/sm_r895_event.jpg"> <!--/제품이벤트-->
+<img src="http://ipark.speedgabia.com/image/samsung/galaxy_watch/sm_r895/package_event.jpg">
+<img src="http://ipark.speedgabia.com/image/samsung/galaxy_watch/sm_r895/package_notice01.jpg">
 
-    <!-- 업로드할 상품의 별도 이벤트를 등록할때 이 주소를 사용합니다. 정품등록이벤트나 특정상품 사은품이벤트가 들어갑니다. -->
-    <img src="http://ipark.speedgabia.com/image/samsung/tabletPC/sm_x900/package_event.jpg" />
+<img src="http://ipark.speedgabia.com/image/samsung/galaxy_watch/sm_r895/sm_r895_main.jpg">
+<img src="http://ipark.speedgabia.com/image/samsung/galaxy_watch/sm_r895/sm_r895_base01.jpg">
+<img src="http://ipark.speedgabia.com/image/samsung/galaxy_watch/sm_r895/sm_r895_base02.jpg">
 
-    <!-- 거의 모든 상품 FTP 폴더에 보시면 package_event, package_notice01~04는 있습니다.
-    이 주소들은 빈프레임이며, 상품의 공지 및 이벤트 설명이 모자랄 수 있기 때문에 넣어놓은 예비 주소들입니다.
-    하지만 이미지만 만들고 쉽게 수정하기 위해서 꼭 필요한 예비주소들이니 꼭 넣어주세요. -->
-    <img src="http://ipark.speedgabia.com/image/samsung/tabletPC/sm_x900/sm_x900_event.jpg" /> <!--/제품이벤트-->
-    <img src="http://ipark.speedgabia.com/image/samsung/tabletPC/sm_x900/package_notice01.jpg" /> <!--빈프레임-->
+<img src="http://ipark.speedgabia.com/image/samsung/galaxy_watch/sm_r895/package1.jpg">
+<img src="http://ipark.speedgabia.com/image/samsung/galaxy_watch/sm_r895/package2.jpg">
+<img src="http://ipark.speedgabia.com/image/samsung/galaxy_watch/sm_r895/package3.jpg">
+<img src="http://ipark.speedgabia.com/image/samsung/galaxy_watch/sm_r895/package_notice02.jpg">
 
-    <!-- 상품의 메인이미지입니다. 메인미지는 상품의 간략한 기능과 상품명이 기재되어 있습니다. -->
-    <img src="http://ipark.speedgabia.com/image/samsung/tabletPC/sm_x900/sm_x900_main.jpg" /> <!--메인이미지-->
+<img src="http://ipark.speedgabia.com/image/samsung/galaxy_watch/galaxy_watch_option.jpg">
 
-    <!-- 베이스이미지는 상품의 구성품을 나타내주는 이미지입니다.
-        카메라같은 경우 BODY와 렌즈킷이 구분되어서 만들어야하는 이미지는 꼭 킷에서 분리되어서 나갈 수 있다는
-        안내글을 기재해주셔야합니다.
-        ※베이스이미지는 상품 특성에 따라 이미지의 길이가 길어질 수 있습니다.
-    그러나 마켓에 따라 이미지의 길이의 제한이 있을 수 있으므로, 2000px가 넘을것 같다면 밑과 같이 
-    베이스 이미지를 나누시는것이 좋습니다. -->
-    <img src="http://ipark.speedgabia.com/image/samsung/tabletPC/sm_x900/sm_x900_base.jpg" /> <!--베이스이미지-->
-    <img src="http://ipark.speedgabia.com/image/samsung/tabletPC/sm_x900/sm_x900_base01.jpg" />
+<img src="http://ipark.speedgabia.com/image/samsung/galaxy_watch/sm_r895/sm_r895_sangse.jpg">
 
-
-    <!-- 상품의 패키지 이미지입니다. 보통 패키지 구성이 없더라도 최소 4개정도는 넣어주고 있습니다.-->
-    <img src="http://ipark.speedgabia.com/image/samsung/tabletPC/sm_x900/sm_x900_package1.jpg" /> <!--패키지이미지-->
-    <img src="http://ipark.speedgabia.com/image/samsung/tabletPC/sm_x900/sm_x900_package2.jpg" />
-    <img src="http://ipark.speedgabia.com/image/samsung/tabletPC/sm_x900/sm_x900_package3.jpg" />
-    <img src="http://ipark.speedgabia.com/image/samsung/tabletPC/sm_x900/sm_x900_package4.jpg" />
-    <img src="http://ipark.speedgabia.com/image/samsung/tabletPC/sm_x900/package_notice02.jpg" /> <!-- 빈프레임 -->
-
-     <!-- 상품의 상세 이미지가 들어가는 주소입니다. -->
-    <img src="http://ipark.speedgabia.com/image/samsung/tabletPC/sm_x900/sm_x900_sangse.jpg" /> <!--상세이미지-->
-
-    <!-- 고객센터 안내나 A/S, 배송등의 안내가 들어가는 아웃트로 이미지입니다.
-    마지막 부분에 넣어야할 이미지가 있을 수 있으므로 package_notice03,04 빈 프레임 주소를 사이에 껴주세요. -->
-    <img src="http://ipark.speedgabia.com/image/samsung/tabletPC/sm_x900/package_notice03.jpg" />
-    <img src="http://ipark.speedgabia.com/image/samsung/samsung_notice/samsung_manjok.jpg" /> <!-- 만족 -->
-    <img src="http://ipark.speedgabia.com/image/samsung/tabletPC/sm_x900/package_notice04.jpg" /> <!--빈프레임-->
-    <img src="http://ipark.speedgabia.com/image/customer/dica_customer.jpg" /> <!--/안내페이지-->
-    <img src="http://ipark.speedgabia.com/image/samsung/samsung_notice/samsung_q_a.jpg" />
+<img src="http://ipark.speedgabia.com/image/samsung/galaxy_watch/sm_r895/package_notice03.jpg">
+<img src="http://ipark.speedgabia.com/image/map/map.jpg"> <!--/약도-->
+<img src="http://ipark.speedgabia.com/image/samsung/galaxy_watch/sm_r895/package_notice04.jpg">
+<img src="http://ipark.speedgabia.com/image/customer/customer_etc.jpg">
 </center>
+
 
 
 </body>
