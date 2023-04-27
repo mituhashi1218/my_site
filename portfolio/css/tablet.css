@@ -107,7 +107,7 @@
 	#page5 img.iMac{width: 450px;height: 450px;bottom:10%;right: 5%;position: absolute;opacity: 70;top: 50%;transform:translateY(-50%);}
 	#page5 img.iPad{width: 250px;height: 200px;bottom:25%;right: 10%;position: absolute;opacity: 70;}
 	#page5 div.main h3{text-align: left;font-family:GmarketSansBold;color:#fff;text-shadow:2px 2px 5px #7fa3b3;font-size:2rem;}
-	#page5 div.main h3 span{color:#e86a00;font-size:2rem;}
+	#page5 div.main h3 span{color:#2c9045;font-size:2rem;}
 	#page5 div.main .btn_link{width: 300px;display:inline-block;margin:1.5rem 0  0 0px;padding:12px 20px;color:#fff;border-radius:4px;border:solid 1px #8988ff;cursor:pointer;font-family:GmarketSansMedium;text-align: center;background-color: #8988ff;transition:0.3s;box-shadow:-1px 1px 10px #7fa3b3;opacity:80%;margin-top: 50px;}
 	#page5 div.main .btn_link:hover{box-shadow:-7px 7px 10px #7fa3b3;opacity:100;}
 
